@@ -5,7 +5,6 @@
         public static void Main(string[] args)
         {
         }
-
         public static bool IsToeplitzMatrix(int[,] matrix)
         {
             for (int i = 0; i < matrix.GetLength(0)-1; i++)
