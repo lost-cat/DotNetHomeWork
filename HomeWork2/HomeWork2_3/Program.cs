@@ -18,7 +18,7 @@ namespace HomeWork2_3
 
         public static bool[] SieveOfEratosthenes()
         {
-            bool[] isPrime = new bool[110];
+            var isPrime = new bool[110];
             for (var i = 0; i < isPrime.Length; i++)
             {
                 isPrime[i] = true;
@@ -26,9 +26,9 @@ namespace HomeWork2_3
 
             isPrime[0] = false;
             isPrime[1] = false;
-            for (int i = 2; i < 101; i++)
+            for (var i = 2; i < 101; i++)
             {
-                for (int j = i + 1; j < 101; j++)
+                for (var j = i + 1; j < 101; j++)
                 {
                     if (isPrime[j] == true && j % i == 0)
                     {

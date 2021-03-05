@@ -1,4 +1,6 @@
-﻿namespace HomeWork2_2
+﻿using System.Linq;
+
+namespace HomeWork2_2
 {
     internal class Program
     {
@@ -8,30 +10,12 @@
 
         public static double GetMax(double[] arr)
         {
-            double max = arr[0];
-            foreach (var t in arr)
-            {
-                if (t > max)
-                {
-                    max = t;
-                }
-            }
-
-            return max;
+            return arr.Max();
         }
 
         public static double GetMin(double[] arr)
         {
-            double min = arr[0];
-            foreach (var d in arr)
-            {
-                if (d < min)
-                {
-                    min = d;
-                }
-            }
-
-            return min;
+            return arr.Min();
         }
 
         public static double GetAverage(double[] arr)
@@ -41,13 +25,7 @@
 
         public static double GetTotal(double[] arr)
         {
-            double total = 0;
-            foreach (var d in arr)
-            {
-                total += d;
-            }
-
-            return total;
+            return arr.Sum();
         }
     }
 }

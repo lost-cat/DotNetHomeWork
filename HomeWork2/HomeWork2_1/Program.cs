@@ -8,17 +8,17 @@ namespace HomeWork2_1
     {
         public static void Main(string[] args)
         {
-            int[] data = new int[20];
-            int count;
-            GetData(data, out count);
-            int[] primeFactors = GetPrimeFactors(data, count);
+            var data = new int[20];
+            GetData(data, out var count);
+            var primeFactors = GetPrimeFactors(data, count);
             var ints = primeFactors.Distinct().ToArray();
             foreach (var i in ints)
             {
-                if (i==0)
+                if (i == 0)
                 {
                     continue;
                 }
+
                 Console.WriteLine($"素数因子为{i}");
             }
         }
@@ -53,11 +53,9 @@ namespace HomeWork2_1
                 {
                     if (data[j] % i != 0) continue;
                     var isPrime = IsPrime(i);
-                    if (isPrime)
-                    {
-                        result[index] = i;
-                        index++;
-                    }
+                    if (!isPrime) continue;
+                    result[index] = i;
+                    index++;
                 }
             }
 
@@ -72,7 +70,7 @@ namespace HomeWork2_1
                 return false;
             }
 
-            int k = (int) Math.Sqrt(num);
+            var k = (int) Math.Sqrt(num);
             int i;
             for (i = 2; i <= k; i++)
             {
@@ -82,12 +80,7 @@ namespace HomeWork2_1
                 }
             }
 
-            if (i > k)
-            {
-                return true;
-            }
-
-            return false;
+            return i > k;
         }
     }
 }
