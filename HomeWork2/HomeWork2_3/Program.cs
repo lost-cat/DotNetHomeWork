@@ -7,7 +7,7 @@ namespace HomeWork2_3
         public static void Main(string[] args)
         {
             var bools = SieveOfEratosthenes();
-            for (var i = 2; i <101; i++)
+            for (var i = 2; i < 101; i++)
             {
                 if (bools[i])
                 {
@@ -30,7 +30,7 @@ namespace HomeWork2_3
             {
                 for (int j = i + 1; j < 101; j++)
                 {
-                    if (j % i == 0)
+                    if (isPrime[j] == true && j % i == 0)
                     {
                         isPrime[j] = false;
                     }

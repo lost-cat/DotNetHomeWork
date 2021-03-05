@@ -4,6 +4,7 @@
     {
         public static void Main(string[] args)
         {
+            
         }
         public static bool IsToeplitzMatrix(int[,] matrix)
         {

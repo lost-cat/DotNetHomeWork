@@ -51,14 +51,12 @@ namespace HomeWork2_1
             {
                 for (i = 1; i <= data[j]; i++)
                 {
-                    if (data[j] % i == 0)
+                    if (data[j] % i != 0) continue;
+                    var isPrime = IsPrime(i);
+                    if (isPrime)
                     {
-                        var isPrime = IsPrime(i);
-                        if (isPrime)
-                        {
-                            result[index] = i;
-                            index++;
-                        }
+                        result[index] = i;
+                        index++;
                     }
                 }
             }
