@@ -9,8 +9,8 @@ namespace HomeWork2_1
         public static void Main(string[] args)
         {
             var data = new int[20];
-            GetData(data, out var count);
-            var primeFactors = GetPrimeFactors(data, count);
+            GetData(data, out _);
+            var primeFactors = GetPrimeFactors(data);
             var ints = primeFactors.Distinct().ToArray();
             foreach (var i in ints)
             {
@@ -41,13 +41,14 @@ namespace HomeWork2_1
             }
         }
 
-        private static int[] GetPrimeFactors(int[] data, in int count)
+        private static int[] GetPrimeFactors(int[] data)
         {
+           
             int i;
             int index;
             index = 0;
             int[] result = new int[20];
-            for (int j = 0; j < count; j++)
+            for (int j = 0; j < data.GetLength(0); j++)
             {
                 for (i = 1; i <= data[j]; i++)
                 {

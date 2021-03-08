@@ -12,10 +12,8 @@
             {
                 for (var j = 0; j < matrix.GetLength(1)-1; j++)
                 {
-                    if (matrix[i,j]!=matrix[i+1,j+1])
-                    {
-                        return false;
-                    }
+                    if (matrix[i, j] == matrix[i + 1, j + 1]) continue;
+                    return false;
                 }
             }
 
