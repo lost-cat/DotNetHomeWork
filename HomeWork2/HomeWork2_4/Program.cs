@@ -1,6 +1,6 @@
 ﻿namespace HomeWork2_4
 {
-    internal class Program
+    internal static class Program
     {
         public static void Main(string[] args)
         {

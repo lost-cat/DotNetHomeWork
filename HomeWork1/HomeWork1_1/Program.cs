@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ConsoleApp1
+namespace HomeWork1_1
 {
-    class Program
+    static class Program
     {
         
         
