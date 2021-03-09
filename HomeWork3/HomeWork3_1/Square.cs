@@ -11,8 +11,7 @@ namespace HomeWork3_1
         //正方形的长和宽必须相等
         public override bool IsLegal()
         {
-            
-            return !(Math.Abs(Height - Width) > 0.001);
+            return base.IsLegal() && Width == Height;
         }
     }
 }

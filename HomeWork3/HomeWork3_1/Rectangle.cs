@@ -8,9 +8,9 @@ namespace HomeWork3_1
         private readonly Point _p2;
 
 
-        public double Height => Math.Abs(_p1.Y - _p2.Y);
+        public int Height => Math.Abs(_p1.Y - _p2.Y);
 
-        public double Width => Math.Abs(_p1.X - _p2.X);
+        public int Width => Math.Abs(_p1.X - _p2.X);
 
         public Rectangle(Point p1, Point p2)
         {
@@ -26,8 +26,7 @@ namespace HomeWork3_1
         //当给定的俩个点的横坐标或纵坐标相同时不会构成矩形，
         public virtual bool IsLegal()
         {
-           
-            return !(Math.Abs(_p1.X - _p2.X) < 0.001) && !(Math.Abs(_p1.Y - _p2.Y) < 0.001);
+            return _p1.X != _p2.X && _p1.Y != _p2.Y;
         }
     }
 }
