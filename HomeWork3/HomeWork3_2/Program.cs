@@ -19,8 +19,8 @@ namespace HomeWork3_2
             {
                 if (shape.IsLegal())
                 {
-                    Console.WriteLine($"该图形合法，面积为{shape.GetArea()}");
-                    totalArea += shape.GetArea();
+                    Console.WriteLine($"该图形合法，面积为{shape.Area}");
+                    totalArea += shape.Area;
                 }
 
                 Console.WriteLine("该图形不合法");

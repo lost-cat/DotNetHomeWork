@@ -2,7 +2,8 @@ namespace HomeWork3_1
 {
     public interface IShape
     {
-        double GetArea();
+       
          bool  IsLegal();
+         double Area { get; }
     }
 }

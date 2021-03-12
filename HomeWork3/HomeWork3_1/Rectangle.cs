@@ -21,15 +21,14 @@ namespace HomeWork3_1
         }
 
         
-        public double GetArea()
-        {
-            return Height * Width;
-        }
+       
 
         //当给定的俩个点的横坐标或纵坐标相同时不会构成矩形，
         public virtual bool IsLegal()
         {
             return _p1.X != _p2.X && _p1.Y != _p2.Y;
         }
+
+        public double Area => Height * Width;
     }
 }
