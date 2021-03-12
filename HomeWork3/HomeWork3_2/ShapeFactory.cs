@@ -5,9 +5,10 @@ namespace HomeWork3_2
 {
     public class ShapeFactory
     {
+      private  static Random rd = new Random();
         public static IShape GetShape(int shapeId)
         {
-            Random rd = new Random();
+            
             switch (shapeId)
             {
                 case 0:
