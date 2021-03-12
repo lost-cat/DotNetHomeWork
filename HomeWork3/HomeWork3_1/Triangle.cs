@@ -7,6 +7,15 @@ namespace HomeWork3_1
         // 三角形的三个点
         private Point _p1, _p2, _p3;
 
+        public double SideA => Math.Sqrt((_p1.X - _p2.X) * (_p1.X - _p2.X)
+                                         + (_p1.Y - _p2.Y) * (_p1.Y - _p2.Y));
+
+        public double SideB => Math.Sqrt((_p1.X - _p3.X) * (_p1.X - _p3.X) 
+                                         + (_p1.Y - _p3.Y) * (_p1.Y - _p3.Y));
+
+        public double SideC => Math.Sqrt((_p2.X - _p3.X) * (_p2.X - _p3.X)
+                                         + (_p2.Y - _p3.Y) * (_p2.Y - _p3.Y));
+
         public Triangle(Point p1, Point p2, Point p3)
         {
             _p1 = p1;
@@ -17,11 +26,8 @@ namespace HomeWork3_1
         //海伦公式求三角形面积。
         public double GetArea()
         {
-            double sideA = Math.Sqrt((_p1.X - _p2.X) * (_p1.X - _p2.X) + (_p1.Y - _p2.Y) * (_p1.Y - _p2.Y));
-            double sideB = Math.Sqrt((_p1.X - _p3.X) * (_p1.X - _p3.X) + (_p1.Y - _p3.Y) * (_p1.Y - _p3.Y));
-            double sideC = Math.Sqrt((_p2.X - _p3.X) * (_p2.X - _p3.X) + (_p2.Y - _p3.Y) * (_p2.Y - _p3.Y));
-            double p = (sideA + sideB + sideC) / 2;
-            double area = Math.Sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+            double p = (SideA + SideB + SideC) / 2;
+            double area = Math.Sqrt(p * (p - SideA) * (p - SideB) * (p - SideC));
             return area;
         }
 

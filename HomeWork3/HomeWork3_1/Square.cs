@@ -1,5 +1,3 @@
-using System;
-
 namespace HomeWork3_1
 {
     public class Square : Rectangle
