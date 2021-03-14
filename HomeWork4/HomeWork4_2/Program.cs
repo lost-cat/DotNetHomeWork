@@ -12,13 +12,13 @@ namespace HomeWork4_2
             alarm.Start();
         }
 
-        public static void ShowTime(object sender, TimeArgs eventArgs)
+        public static void ShowTime(object sender, Alarm.TimeArgs eventArgs)
         {
             Console.WriteLine($"过了一秒了，现在的时间是" +
                               $"{eventArgs.Hours}点{eventArgs.Minutes}分{eventArgs.Seconds}秒");
         }
 
-        public static void Clock(object sender, TimeArgs eventArgs)
+        public static void Clock(object sender, Alarm.TimeArgs eventArgs)
         {
             Console.WriteLine($"过了一分钟了");
         }

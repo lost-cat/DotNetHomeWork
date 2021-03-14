@@ -2,10 +2,45 @@ using System;
 
 namespace HomeWork4_2
 {
-    public delegate void TickHandler(object sender, TimeArgs tickArgs);
+    public delegate void TickHandler(object sender, Alarm.TimeArgs tickArgs);
 
-    public delegate void AlarmHandler(object sender, TimeArgs eventArgs);
+    public delegate void AlarmHandler(object sender, Alarm.TimeArgs eventArgs);
 
+
+
+    public class Alarm
+    {
+        public event TickHandler Tick;
+        public event AlarmHandler Clock;
+
+        protected virtual void OnTick(TimeArgs tickArgs)
+        {
+            Tick?.Invoke(this, tickArgs);
+        }
+
+        protected virtual void OnClock(TimeArgs eventArgs)
+        {
+            Clock?.Invoke(this, eventArgs);
+        }
+
+        //每个一秒触发一次Tick事件
+        //每个一分钟触发一次Clock事件
+        public void Start()
+        {
+            TimeArgs eventArgs = new TimeArgs {Seconds = 0, Hours = 0, Minutes = 0};
+            while (eventArgs.Seconds <= 300)
+            {
+                eventArgs.Seconds++;
+                OnTick(eventArgs);
+                if (eventArgs.Seconds == 0)
+                {
+                    OnClock(eventArgs);
+                }
+
+                System.Threading.Thread.Sleep(1000);
+            }
+        }
+        
     public class TimeArgs : EventArgs
     {
         private int _hours;
@@ -54,39 +89,5 @@ namespace HomeWork4_2
             }
         }
     }
-
-
-    public class Alarm
-    {
-        public event TickHandler Tick;
-        public event AlarmHandler Clock;
-
-        protected virtual void OnTick(TimeArgs tickArgs)
-        {
-            Tick?.Invoke(this, tickArgs);
-        }
-
-        protected virtual void OnClock(TimeArgs eventArgs)
-        {
-            Clock?.Invoke(this, eventArgs);
-        }
-
-        //每个一秒触发一次Tick事件
-        //每个一分钟触发一次Clock事件
-        public void Start()
-        {
-            TimeArgs eventArgs = new TimeArgs {Seconds = 0, Hours = 0, Minutes = 0};
-            while (eventArgs.Seconds <= 300)
-            {
-                eventArgs.Seconds++;
-                OnTick(eventArgs);
-                if (eventArgs.Seconds == 0)
-                {
-                    OnClock(eventArgs);
-                }
-
-                System.Threading.Thread.Sleep(1000);
-            }
-        }
     }
 }
