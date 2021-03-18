@@ -9,7 +9,7 @@ namespace HomeWork4_2
             Alarm alarm = new Alarm();
             alarm.Tick += ShowTime;
             alarm.Clock += Clock;
-            alarm.Start();
+            alarm.Start(new Alarm.TimeArgs(4,44,0));
         }
 
         private static void ShowTime(object sender, Alarm.TimeArgs eventArgs)
