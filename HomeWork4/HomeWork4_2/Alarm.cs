@@ -12,13 +12,14 @@ namespace HomeWork4_2
     {
         public event TickHandler Tick;
         public event AlarmHandler Clock;
+        
 
-        protected virtual void OnTick(TimeArgs tickArgs)
+        private void OnTick(TimeArgs tickArgs)
         {
             Tick?.Invoke(this, tickArgs);
         }
 
-        protected virtual void OnClock(TimeArgs eventArgs)
+        private void OnClock(TimeArgs eventArgs)
         {
             Clock?.Invoke(this, eventArgs);
         }
@@ -27,7 +28,7 @@ namespace HomeWork4_2
         //每个一分钟触发一次Clock事件
         public void Start()
         {
-            TimeArgs eventArgs = new TimeArgs {Seconds = 0, Hours = 0, Minutes = 0};
+            var eventArgs = new TimeArgs {Seconds = 0, Hours = 0, Minutes = 0};
             while (eventArgs.Seconds <= 300)
             {
                 eventArgs.Seconds++;
@@ -67,11 +68,9 @@ namespace HomeWork4_2
             set
             {
                 _minutes = value;
-                if (_minutes == 60)
-                {
-                    _minutes = 0;
-                    Hours++;
-                }
+                if (_minutes != 60) return;
+                _minutes = 0;
+                Hours++;
             }
         }
 
@@ -81,13 +80,13 @@ namespace HomeWork4_2
             set
             {
                 _seconds = value;
-                if (_seconds == 60)
-                {
-                    _seconds = 0;
-                    Minutes++;
-                }
+                if (_seconds != 60) return;
+                _seconds = 0;
+                Minutes++;
             }
         }
     }
+
+   
     }
 }

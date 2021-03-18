@@ -6,8 +6,8 @@ namespace HomeWork4_1
     {
         public static void Main(string[] args)
         {
-            GenericList<int> list = new GenericList<int>();
-            int total = 0;
+            var list = new GenericList<int>();
+            var total = 0;
 
 
             Random random = new Random();
