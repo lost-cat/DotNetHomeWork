@@ -20,7 +20,7 @@ namespace HomeWork4_2
 
         private static void Clock(object sender, Alarm.TimeArgs eventArgs)
         {
-            Console.WriteLine($"过了一分钟了");
+            Console.WriteLine("您设定闹钟已到点");
         }
     }
 }
