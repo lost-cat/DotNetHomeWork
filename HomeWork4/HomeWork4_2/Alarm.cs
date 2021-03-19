@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 
 namespace HomeWork4_2
 {
@@ -31,28 +32,33 @@ namespace HomeWork4_2
             DateTime now = DateTime.Now;
             var eventArgs = new TimeArgs(now.Hour, now.Minute, now.Second);
 
-            while (!eventArgs.Equals(timeArgs))
+            while (true)
             {
                 eventArgs.Seconds++;
                 OnTick(eventArgs);
-                System.Threading.Thread.Sleep(1000);
+                Thread.Sleep(1000);
+                if (!eventArgs.Equals(timeArgs))
+                {
+                    continue;
+                }
+                OnClock(eventArgs);
             }
-            OnClock(eventArgs);
+        
         }
 
         public class TimeArgs : EventArgs
         {
-            private int _hours;
+            private int hours;
 
 
-            private int _minutes;
-            private int _seconds;
+            private int minutes;
+            private int seconds;
 
             public TimeArgs(int hour, int minute, int second)
             {
-                _hours = hour;
-                _minutes = minute;
-                _seconds = second;
+                hours = hour;
+                minutes = minute;
+                seconds = second;
             }
 
             public TimeArgs()
@@ -61,13 +67,13 @@ namespace HomeWork4_2
 
             public int Hours
             {
-                get => _hours;
+                get => hours;
                 set
                 {
-                    _hours = value;
-                    if (_hours == 24)
+                    hours = value;
+                    if (hours == 24)
                     {
-                        _hours = 0;
+                        hours = 0;
                     }
                 }
             }
@@ -75,12 +81,12 @@ namespace HomeWork4_2
 
             public int Minutes
             {
-                get => _minutes;
+                get => minutes;
                 set
                 {
-                    _minutes = value;
-                    if (_minutes != 60) return;
-                    _minutes = 0;
+                    minutes = value;
+                    if (minutes != 60) return;
+                    minutes = 0;
                     Hours++;
                 }
             }
@@ -88,12 +94,12 @@ namespace HomeWork4_2
 
             public int Seconds
             {
-                get => _seconds;
+                get => seconds;
                 set
                 {
-                    _seconds = value;
-                    if (_seconds != 60) return;
-                    _seconds = 0;
+                    seconds = value;
+                    if (seconds != 60) return;
+                    seconds = 0;
                     Minutes++;
                 }
             }

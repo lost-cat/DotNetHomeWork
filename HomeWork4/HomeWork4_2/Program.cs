@@ -14,7 +14,7 @@ namespace HomeWork4_2
 
         private static void ShowTime(object sender, Alarm.TimeArgs eventArgs)
         {
-            Console.WriteLine($"过了一秒了，现在的时间是" +
+            Console.WriteLine("过了一秒了，现在的时间是" +
                               $"{eventArgs.Hours}点{eventArgs.Minutes}分{eventArgs.Seconds}秒");
         }
 
