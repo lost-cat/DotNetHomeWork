@@ -19,7 +19,6 @@ namespace HomeWork4_1
             int min;
             int max = min = list.Head.Data;
             list.ForEach(Console.WriteLine);
-
             list.ForEach(d => total += d);
             Console.WriteLine($"和为{total}");
             list.ForEach(d =>
