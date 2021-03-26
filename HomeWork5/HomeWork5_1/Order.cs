@@ -6,11 +6,6 @@ namespace HomeWork5_1
 {
     public class Order
     {
-        public override string ToString()
-        {
-            return $"{nameof(OrderId)}: {OrderId}, {nameof(OrderTIme)}: {OrderTIme}, {nameof(DetailsList)}: {DetailsList}, {nameof(DeliverAddress)}: {DeliverAddress}, {nameof(TotalMoney)}: {TotalMoney}";
-        }
-
         //该订单的id
         public int OrderId { get; }
 
@@ -20,8 +15,8 @@ namespace HomeWork5_1
         //具体的订单明细表 
         public List<OrderDetails> DetailsList { get; }
 
-        //派送地址
-        public String DeliverAddress { get; }
+        //该订单对应的用户
+        public Customer Customer { get; set; }
 
         public int TotalMoney
         {
@@ -32,14 +27,36 @@ namespace HomeWork5_1
             List<OrderDetails> detailsList,
             int orderId,
             DateTime orderTIme,
-            string deliverAddress)
+            Customer customer)
         {
             DetailsList = detailsList;
             OrderId = orderId;
             OrderTIme = orderTIme;
-            DeliverAddress = deliverAddress;
+            Customer = customer;
         }
 
-     
+        private bool Equals(Order other)
+        {
+            return OrderId == other.OrderId;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            return obj.GetType() == this.GetType() && Equals((Order) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return OrderId;
+        }
+
+        public override string ToString()
+        {
+            return
+                $"{nameof(OrderId)}: {OrderId}," +
+                $" {nameof(OrderTIme)}: {OrderTIme}, {nameof(DetailsList)}: {DetailsList}, {nameof(Customer)}: {Customer}, {nameof(TotalMoney)}: {TotalMoney}";
+        }
     }
 }

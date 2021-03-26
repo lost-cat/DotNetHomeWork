@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace HomeWork5_1
 {
-    public class OrderService
+    public static class OrderService
     {
         private static readonly List<Order> Orders = new List<Order>();
 
@@ -22,6 +22,7 @@ namespace HomeWork5_1
 
             Orders.Add(order);
         }
+
 
         /// <summary>
         /// 删除符合条件的order
@@ -76,12 +77,26 @@ namespace HomeWork5_1
         public static List<Order> QueryOrder(Predicate<Order> predicate)
         {
             var orders = Orders.Where(o => predicate(o));
-            return orders.ToList();
+            return orders.OrderBy(o => o.TotalMoney).ToList();
         }
 
+        /// <summary>
+        /// 对orderList进行排序，如果不传入比较器则默认按照id排序
+        /// </summary>
+        /// <param name="comparison">带传入的比较器，可以不写</param>
         public static void Sort(Comparison<Order> comparison = null)
         {
             Orders.Sort(comparison ?? ((order, order1) => order.OrderId - order1.OrderId));
+        }
+
+        public static void AddOrderDetails(Order order, OrderDetails orderDetails)
+        {
+            if (order.DetailsList.Exists(o => Equals(o, orderDetails)))
+            {
+                throw new Exception("该订单明细已存在于该订单！");
+            }
+
+            order.DetailsList.Add(orderDetails);
         }
     }
 }

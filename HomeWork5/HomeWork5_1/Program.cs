@@ -23,12 +23,17 @@ namespace HomeWork5_1
             }
 
 
-            OrderService.AddOrder(new Order(
-                new List<OrderDetails>(new[] {orderDetailsArray[1], orderDetailsArray[2]}),
-                001,
-                DateTime.Now,
-                "武汉大学"));
-            var order = OrderService.QueryOrderById(001);
+            for (int i = 0; i < 5; i++)
+            {
+                OrderService.AddOrder(new Order(
+                    new List<OrderDetails>(
+                        new[] {orderDetailsArray[2 * i], orderDetailsArray[2 * i + 1]}),
+                    i,
+                    DateTime.Now,
+                    new Customer("lmk", "wuhan university")));
+            }
+
+            var order = OrderService.QueryOrderById(1);
             foreach (var details in order.DetailsList)
             {
                 Console.WriteLine(details);
@@ -45,6 +50,7 @@ namespace HomeWork5_1
             {
                 Console.WriteLine(details);
             }
+
             
         }
     }
