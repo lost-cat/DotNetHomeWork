@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace HomeWork5_1
 {
+    [Serializable]
     public class Order
     {
         //该订单的id

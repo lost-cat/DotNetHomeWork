@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Xml.Serialization;
+using MySql.Data.MySqlClient;
 
 namespace HomeWork5_1
 {
@@ -10,10 +13,10 @@ namespace HomeWork5_1
 
         public static void AddOrder(Order order)
         {
-            if (order == null)
-            {
-                throw new NullReferenceException("该订单为空!");
-            }
+            // if (order == null)
+            // {
+            //     throw new NullReferenceException("该订单为空!");
+            // }
 
             if (Orders.Exists(o => Equals(o, order)))
             {
@@ -81,6 +84,21 @@ namespace HomeWork5_1
         }
 
         /// <summary>
+        /// 返回所有包含指定商品的orders
+        /// </summary>
+        /// <param name="itemDescription"></param>
+        /// <returns></returns>
+        public static List<Order> QueryOrderByItemName(ItemDescription itemDescription)
+        {
+            List<Order> orders = Orders
+                .Where(order => order.DetailsList
+                    .Any(details => details.Item.Description.Equals(itemDescription)))
+                .ToList();
+            
+            return orders;
+        }
+
+        /// <summary>
         /// 对orderList进行排序，如果不传入比较器则默认按照id排序
         /// </summary>
         /// <param name="comparison">带传入的比较器，可以不写</param>
@@ -97,6 +115,25 @@ namespace HomeWork5_1
             }
 
             order.DetailsList.Add(orderDetails);
+        }
+
+        /// <summary>
+        /// 将对应的order数据导出到指定path的xml文件上.
+        /// </summary>
+        /// <param name="path">所要导入xml的位置</param>
+        public static void Export(string path)
+        {
+            FileStream stream = File.Create(path);
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Order>));
+            xmlSerializer.Serialize(stream, Orders);
+        }
+
+        /// <summary>
+        /// 载入指定xml文件中的订单
+        /// </summary>
+        /// <param name="path">指定的xml路径</param>
+        public static void Import(string path)
+        {
         }
     }
 }
