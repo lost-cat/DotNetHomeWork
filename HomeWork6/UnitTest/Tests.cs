@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using HomeWork5_1;
+using NUnit.Framework;
+
+namespace orderTest
+{
+    [TestFixture]
+    public class Tests
+    {
+        Random random = new Random();
+
+        [OneTimeSetUp]
+        public void Init()
+        {
+            var orderDetailsArray = new OrderDetails[10];
+            for (var i = 0; i < orderDetailsArray.Length; i++)
+            {
+                orderDetailsArray[i] = new OrderDetails(
+                    ItemFactory.GetItem(random.Next(3)),
+                    random.Next(1, 10));
+            }
+
+
+            for (int i = 0; i < 5; i++)
+            {
+                OrderService.AddOrder(new Order(
+                    new List<OrderDetails>(
+                        new[] {orderDetailsArray[2 * i], orderDetailsArray[2 * i + 1]}),
+                    i,
+                    DateTime.Now,
+                    new Customer("lmk", "wuhan university")));
+            }
+        }
+
+        [Test]
+        public void XmlTest()
+        {
+            OrderService.Export("test.xml");
+        }
+    }
+}

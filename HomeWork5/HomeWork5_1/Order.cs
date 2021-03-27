@@ -48,6 +48,10 @@ namespace HomeWork5_1
             return obj.GetType() == this.GetType() && Equals((Order) obj);
         }
 
+        public Order()
+        {
+        }
+
         public override int GetHashCode()
         {
             return OrderId;

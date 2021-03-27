@@ -1,5 +1,8 @@
+using System;
+
 namespace HomeWork5_1
 {
+    [Serializable]
     public class OrderDetails
     {
         //对应的商品
@@ -13,6 +16,10 @@ namespace HomeWork5_1
 
         //代表该订单明细的折扣
         public double DisCount { get; }
+
+        public OrderDetails()
+        {
+        }
 
         public OrderDetails(Item item, int itemCounts, double disCount = 1.0)
         {

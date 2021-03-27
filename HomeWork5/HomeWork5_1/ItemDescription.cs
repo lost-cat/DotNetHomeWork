@@ -2,6 +2,7 @@ using System;
 
 namespace HomeWork5_1
 {
+    [Serializable]
     public class ItemDescription
     {
         //商品的类型
