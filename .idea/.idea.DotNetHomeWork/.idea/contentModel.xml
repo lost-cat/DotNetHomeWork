@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\white\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\white\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_DotNetHomeWork.-325453726.00" t="ExcludeRecursive" />
+    <e p="C:\Users\white\RiderProjects\DotNetHomeWork" t="IncludeFlat">
+      <e p="DotNetHomeWork.sln" t="IncludeFlat" />
+      <e p="HomeWork1\HomeWork1_1" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="HomeWork1_1.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="HomeWork1\Homework1_2" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Form1.cs" t="Include" />
+        <e p="Form1.Designer.cs" t="Include" />
+        <e p="Form1.resx" t="Include" />
+        <e p="Homework1_2.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+      </e>
+      <e p="HomeWork2\HomeWork2_1" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="HomeWork2_1.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="HomeWork2\HomeWork2_2" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="HomeWork2_2.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="HomeWork2\HomeWork2_3" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="HomeWork2_3.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="HomeWork2\HomeWork2_4" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="HomeWork2_4.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="HomeWork3\HomeWork3_1" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="HomeWork3_1.csproj" t="IncludeRecursive" />
+        <e p="IShape.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Point.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Rectangle.cs" t="Include" />
+        <e p="Square.cs" t="Include" />
+        <e p="Triangle.cs" t="Include" />
+      </e>
+      <e p="HomeWork3\HomeWork3_2" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="HomeWork3_2.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="ShapeFactory.cs" t="Include" />
+      </e>
+      <e p="HomeWork4\HomeWork4_1" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GenericList.cs" t="Include" />
+        <e p="HomeWork4_1.csproj" t="IncludeRecursive" />
+        <e p="Node.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="HomeWork4\HomeWork4_2" t="IncludeRecursive">
+        <e p="Alarm.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="HomeWork4_2.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="HomeWork5\HomeWork5_1" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Customer.cs" t="Include" />
+        <e p="HomeWork5_1.csproj" t="IncludeRecursive" />
+        <e p="Item.cs" t="Include" />
+        <e p="ItemDescription.cs" t="Include" />
+        <e p="ItemFactory.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Order.cs" t="Include" />
+        <e p="OrderDetails.cs" t="Include" />
+        <e p="OrderService.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="HomeWork6\UnitTest" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Tests.cs" t="Include" />
+        <e p="UnitTest.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
