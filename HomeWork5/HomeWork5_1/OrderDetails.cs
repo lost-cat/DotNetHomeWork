@@ -6,7 +6,7 @@ namespace HomeWork5_1
     public class OrderDetails
     {
         //对应的商品
-        public Item Item { get; }
+        public Item Item { get; set; }
 
         //该商品的数量
         public int ItemCounts { get; set; }
@@ -15,7 +15,7 @@ namespace HomeWork5_1
         public int OrderDetailPrice => Item.Description.Price * ItemCounts;
 
         //代表该订单明细的折扣
-        public double DisCount { get; }
+        public double DisCount { get; set; }
 
         public OrderDetails()
         {

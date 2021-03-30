@@ -6,12 +6,16 @@ namespace HomeWork5_1
     public class Item
     {
         //带表每个货物自己的编号，独一无二
-        
-        
-        public int ItemId { get; }
+
+
+        public Item()
+        {
+        }
+
+        public int ItemId { get; set; }
        
         //商品的描述信息，包括价格，名称 和对应的商品类型（代表一类商品）
-        public ItemDescription Description { get; }
+        public ItemDescription Description { get; set; }
         public Item(int itemId, ItemDescription description)
         {
             ItemId = itemId;
@@ -35,7 +39,7 @@ namespace HomeWork5_1
         {
             unchecked
             {
-                return (ItemId * 397) ^ (Description != null ? Description.GetHashCode() : 0);
+                return ItemId * 397 ^ (Description != null ? Description.GetHashCode() : 0);
             }
         }
 

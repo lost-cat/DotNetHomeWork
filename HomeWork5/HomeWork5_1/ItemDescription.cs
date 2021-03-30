@@ -6,11 +6,15 @@ namespace HomeWork5_1
     public class ItemDescription
     {
         //商品的类型
-        public int ItemType { get; }
+        public ItemDescription()
+        {
+        }
+
+        public int ItemType { get; set; }
         //商品的价格
-        public int Price { get; }
+        public int Price { get; set; }
         //商品的名称
-        public String Name { get; }
+        public String Name { get; set; }
 
         public ItemDescription(int itemType, int price, String name)
         {

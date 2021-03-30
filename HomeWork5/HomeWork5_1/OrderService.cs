@@ -17,7 +17,8 @@ namespace HomeWork5_1
                 throw new NullReferenceException("该订单为空!");
             }
 
-            if (Orders.Exists(o => Equals(o, order))) throw new Exception("该订单已存在，请不要重复添加!");
+            if (Orders.Exists(o => Equals(o, order)))
+                throw new Exception("该订单已存在，请不要重复添加!");
 
             Orders.Add(order);
         }
@@ -29,7 +30,12 @@ namespace HomeWork5_1
         /// <param name="predicate">通过给定条件匹配对应的order</param>
         public static void DeleteOrder(Predicate<Order> predicate)
         {
-            foreach (var order in Orders.Where(order => predicate(order))) Orders.Remove(order);
+            var enumerable = Orders.Where(o => predicate(o));
+            var orders = enumerable.ToArray();
+            foreach (var t in orders)
+            {
+                Orders.Remove(t);
+            }
         }
 
         /// <summary>

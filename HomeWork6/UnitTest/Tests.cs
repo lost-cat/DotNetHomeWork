@@ -32,6 +32,8 @@ namespace orderTest
                     new Customer("lmk", "wuhan university")));
             }
         }
+        
+        
 
         [Test]
         public void XmlExportTest()
@@ -41,9 +43,15 @@ namespace orderTest
         }
 
         [Test]
-        public void XmlImportText()
+        public void XmlImportTest()
         {
             OrderService.Import("test.xml");
+        }
+
+        [Test]
+        public void DeleteOrderTest()
+        {
+            OrderService.DeleteOrder(o=>o.OrderId==1);
         }
         
     }
