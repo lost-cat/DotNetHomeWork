@@ -8,7 +8,7 @@ namespace orderTest
     [TestFixture]
     public class Tests
     {
-        Random random = new Random();
+        private readonly Random random = new Random();
 
         [OneTimeSetUp]
         public void Init()
@@ -34,9 +34,17 @@ namespace orderTest
         }
 
         [Test]
-        public void XmlTest()
+        public void XmlExportTest()
         {
             OrderService.Export("test.xml");
+            
         }
+
+        [Test]
+        public void XmlImportText()
+        {
+            OrderService.Import("test.xml");
+        }
+        
     }
 }
