@@ -22,7 +22,7 @@ namespace orderTest
             }
 
 
-            for (int i = 0; i < 5; i++)
+            for (var i = 0; i < 5; i++)
             {
                 OrderService.AddOrder(new Order(
                     new List<OrderDetails>(
@@ -32,14 +32,12 @@ namespace orderTest
                     new Customer("lmk", "wuhan university")));
             }
         }
-        
-        
+
 
         [Test]
         public void XmlExportTest()
         {
             OrderService.Export("test.xml");
-            
         }
 
         [Test]
@@ -51,8 +49,14 @@ namespace orderTest
         [Test]
         public void DeleteOrderTest()
         {
-            OrderService.DeleteOrder(o=>o.OrderId==1);
+            OrderService.DeleteOrder(o => o.OrderId == 1);
         }
-        
+
+        [Test]
+        public void QueryOrderTest()
+        {
+            var order = OrderService.QueryOrderById(1);
+            Assert.True(order.OrderId==1);
+        }
     }
 }

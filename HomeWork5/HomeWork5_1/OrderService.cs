@@ -8,7 +8,7 @@ namespace HomeWork5_1
 {
     public static class OrderService
     {
-        private static List<Order> Orders = new List<Order>();
+        private static List<Order> _orders = new List<Order>();
 
         public static void AddOrder(Order order)
         {
@@ -17,10 +17,10 @@ namespace HomeWork5_1
                 throw new NullReferenceException("该订单为空!");
             }
 
-            if (Orders.Exists(o => Equals(o, order)))
+            if (_orders.Exists(o => Equals(o, order)))
                 throw new Exception("该订单已存在，请不要重复添加!");
 
-            Orders.Add(order);
+            _orders.Add(order);
         }
 
 
@@ -30,11 +30,12 @@ namespace HomeWork5_1
         /// <param name="predicate">通过给定条件匹配对应的order</param>
         public static void DeleteOrder(Predicate<Order> predicate)
         {
-            var enumerable = Orders.Where(o => predicate(o));
+            var enumerable = _orders.Where(o => predicate(o));
             var orders = enumerable.ToArray();
+
             foreach (var t in orders)
             {
-                Orders.Remove(t);
+                _orders.Remove(t);
             }
         }
 
@@ -45,7 +46,7 @@ namespace HomeWork5_1
         /// <param name="action">对筛选后的order执行的操作</param>
         public static void ModifyOrder(Predicate<Order> predicate, Action<Order> action)
         {
-            foreach (var order in Orders.Where(order => predicate(order)))
+            foreach (var order in _orders.Where(order => predicate(order)))
             {
                 action(order);
                 return;
@@ -62,7 +63,7 @@ namespace HomeWork5_1
         /// <exception cref="Exception"></exception>
         public static Order QueryOrderById(int orderId)
         {
-            var order = Orders.Find(o => o.OrderId == orderId);
+            var order = _orders.Find(o => o.OrderId == orderId);
             if (order == null) throw new Exception("该订单不存在");
 
             return order;
@@ -75,7 +76,7 @@ namespace HomeWork5_1
         /// <returns></returns>
         public static List<Order> QueryOrder(Predicate<Order> predicate)
         {
-            var orders = Orders.Where(o => predicate(o));
+            var orders = _orders.Where(o => predicate(o));
             return orders.OrderBy(o => o.TotalMoney).ToList();
         }
 
@@ -86,7 +87,7 @@ namespace HomeWork5_1
         /// <returns></returns>
         public static List<Order> QueryOrderByItemName(ItemDescription itemDescription)
         {
-            var orders = Orders
+            var orders = _orders
                 .Where(order => order.DetailsList
                     .Any(details => details.Item.Description.Equals(itemDescription)))
                 .ToList();
@@ -100,7 +101,7 @@ namespace HomeWork5_1
         /// <param name="comparison">带传入的比较器，可以不写</param>
         public static void Sort(Comparison<Order> comparison = null)
         {
-            Orders.Sort(comparison ?? ((order, order1) => order.OrderId - order1.OrderId));
+            _orders.Sort(comparison ?? ((order, order1) => order.OrderId - order1.OrderId));
         }
 
         public static void AddOrderDetails(Order order, OrderDetails orderDetails)
@@ -116,9 +117,11 @@ namespace HomeWork5_1
         /// <param name="path">所要导入xml的位置</param>
         public static void Export(string path)
         {
-            var stream = File.Create(path);
-            var xmlSerializer = new XmlSerializer(typeof(List<Order>));
-            xmlSerializer.Serialize(stream, Orders);
+            using (var stream = File.Create(path))
+            {
+                var xmlSerializer = new XmlSerializer(typeof(List<Order>));
+                xmlSerializer.Serialize(stream, _orders);
+            }
         }
 
         /// <summary>
@@ -127,11 +130,15 @@ namespace HomeWork5_1
         /// <param name="path">指定的xml路径</param>
         public static void Import(string path)
         {
-            var stream = File.Open(path, FileMode.Open);
-            var xmlSerializer = new XmlSerializer(typeof(List<Order>));
-            var o = xmlSerializer.Deserialize(stream);
-            var list = o as List<Order>;
-            Orders = Orders.Union(list ?? throw new InvalidOperationException()).ToList();
+            using (var stream = File.Open(path, FileMode.Open))
+            {
+                var xmlSerializer = new XmlSerializer(typeof(List<Order>));
+                var o = xmlSerializer.Deserialize(stream);
+                var list = o as List<Order>;
+                _orders = _orders
+                    .Union(list ?? throw new InvalidOperationException())
+                    .ToList();
+            }
         }
     }
 }

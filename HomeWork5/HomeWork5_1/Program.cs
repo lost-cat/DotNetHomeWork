@@ -46,6 +46,7 @@ namespace HomeWork5_1
                     details.ItemCounts += 10;
                 }
             });
+            
             foreach (var details in order.DetailsList)
             {
                 Console.WriteLine(details);

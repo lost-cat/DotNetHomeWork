@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HomeWork7_1
@@ -15,6 +8,26 @@ namespace HomeWork7_1
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.label1.Text = @"hello world";
+        }
+
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+
         }
     }
 }
