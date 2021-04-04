@@ -119,6 +119,9 @@
         <e p="Item.cs" t="Include" />
         <e p="ItemDescription.cs" t="Include" />
         <e p="ItemFactory.cs" t="Include" />
+        <e p="mysql" t="Include">
+          <e p="mysql.config" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="Order.cs" t="Include" />
         <e p="OrderDetails.cs" t="Include" />
@@ -140,6 +143,7 @@
       <e p="HomeWork7\HomeWork7_1" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="CayleyTree.cs" t="Include" />
         <e p="Form1.cs" t="Include" />
         <e p="Form1.Designer.cs" t="Include" />
         <e p="Form1.resx" t="Include" />

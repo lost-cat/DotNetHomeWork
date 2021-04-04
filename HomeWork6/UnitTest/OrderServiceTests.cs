@@ -53,10 +53,16 @@ namespace orderTest
         }
 
         [Test]
+        public void AddOrderTest()
+        {
+            OrderService.AddOrder(new Order());
+        }
+
+        [Test]
         public void QueryOrderTest()
         {
             var order = OrderService.QueryOrderById(1);
-            Assert.True(order.OrderId==1);
+            Assert.True(order.OrderId == 1);
         }
     }
 }

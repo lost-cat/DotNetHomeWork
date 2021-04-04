@@ -17,18 +17,19 @@
     <projectFile>HomeWork7/HomeWork7_1/HomeWork7_1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4054c0a-bb39-4409-b4c1-e5101fa3ead2" name="Default Changelist" comment="第六次作业提交以及第五次作业修改">
+    <list default="true" id="b4054c0a-bb39-4409-b4c1-e5101fa3ead2" name="Default Changelist" comment="第五次代码">
+      <change afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/mysql.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/CayleyTree.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DotNetHomeWork/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DotNetHomeWork/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DotNetHomeWork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DotNetHomeWork/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/DotNetHomeWork/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/DotNetHomeWork/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DotNetHomeWork.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/DotNetHomeWork.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/OrderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/OrderService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/HomeWork5_1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/HomeWork5_1.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork6/UnitTest/Tests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork6/UnitTest/OrderServiceTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork6/UnitTest/UnitTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork6/UnitTest/UnitTest.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork6/UnitTest/OrderServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork6/UnitTest/OrderServiceTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/HomeWork7_1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/HomeWork7_1.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +64,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/65/cc79da42/Random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/0e/227a0833/STAThreadAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C020C489-676C-4D0E-9E11-5B242BEF7AB4/28/0b87fa75/Resources.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/497E7C03-5433-4AE6-B257-9B219192BCF0/f1/571c51d0/WorkItem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/24/a90b295a/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E81851A0-DC73-4A79-AFA9-F5B7273162BE/9d/88331e6d/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9B25E913-D31D-4B8B-83EB-DE8A2012E613/00/9c70f438/XmlSerializer.cs" root0="SKIP_HIGHLIGHTING" />
@@ -73,6 +75,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/fd/bc030f36/Application.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/497E7C03-5433-4AE6-B257-9B219192BCF0/f9/213fb337/TestAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HomeWork6/UnitTest/OrderServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/497E7C03-5433-4AE6-B257-9B219192BCF0/cc/a7f417f2/SimpleWorkItemDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E81851A0-DC73-4A79-AFA9-F5B7273162BE/ef/d9508e99/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/394C8FAE-4BA1-4DD2-A259-BD441D5BEF25/72/fee55e60/ISet`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E81851A0-DC73-4A79-AFA9-F5B7273162BE/08/4e85b97e/EventArgs.cs" root0="SKIP_HIGHLIGHTING" />
@@ -114,13 +117,15 @@
       <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/Item.cs" />
       <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/ItemDescription.cs" />
       <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/Order.cs" />
+      <option value="$PROJECT_DIR$/HomeWork6/UnitTest/Tests.cs" />
+      <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/Program.cs" />
+      <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/OrderService.cs" />
+      <option value="$PROJECT_DIR$/HomeWork6/UnitTest/OrderServiceTests.cs" />
+      <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/mysql.config" />
       <option value="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Program.cs" />
       <option value="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.Designer.cs" />
+      <option value="$PROJECT_DIR$/HomeWork7/HomeWork7_1/CayleyTree.cs" />
       <option value="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.cs" />
-      <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/OrderService.cs" />
-      <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/Program.cs" />
-      <option value="$PROJECT_DIR$/HomeWork6/UnitTest/Tests.cs" />
-      <option value="$PROJECT_DIR$/HomeWork6/UnitTest/OrderServiceTests.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1p6OnUetM20NoeNuM6fL1HJ0rQk" />
@@ -144,7 +149,7 @@
     <property name="settings.editor.selected.configurable" value="RiderUnitTestingPageId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.HomeWork5_1">
+  <component name="RunManager" selected=".NET Project.HomeWork7_1">
     <configuration name="HomeWork1_1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -440,7 +445,11 @@
       <workItem from="1617159552764" duration="1012000" />
       <workItem from="1617163605169" duration="2221000" />
       <workItem from="1617263600914" duration="243000" />
-      <workItem from="1617322628370" duration="4985000" />
+      <workItem from="1617322628370" duration="5868000" />
+      <workItem from="1617329827517" duration="1069000" />
+      <workItem from="1617505296204" duration="2696000" />
+      <workItem from="1617523420308" duration="65000" />
+      <workItem from="1617525892214" duration="2235000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1614500886720</created>
@@ -645,7 +654,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617109765385</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="第五次代码">
+      <created>1617328592755</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1617328592755</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -655,23 +671,37 @@
     <option name="coveragePercentColumnWidth" value="149" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="257" />
+    <option name="symbolColumnWidth" value="256" />
     <coverage-tree-state>
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 21% 503/639" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 22% 503/641" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 21% 503/639" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="HomeWork5_1 53% 101/217" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 22% 503/641" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="HomeWork5_1 54% 100/217" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 21% 503/639" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="HomeWork5_1 53% 101/217" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="HomeWork5_1 53% 101/217" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 22% 503/641" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="HomeWork5_1 54% 100/217" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="HomeWork5_1 54% 100/217" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 22% 503/641" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="HomeWork5_1 54% 100/217" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="HomeWork5_1 54% 100/217" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Order 87% 4/30" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 22% 503/641" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="HomeWork5_1 54% 100/217" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="HomeWork5_1 54% 100/217" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="OrderService 54% 26/57" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -730,26 +760,15 @@
     <MESSAGE value="第六次作业" />
     <MESSAGE value="添加单元测试" />
     <MESSAGE value="第六次作业提交以及第五次作业修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="第六次作业提交以及第五次作业修改" />
+    <MESSAGE value="第五次代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="第五次代码" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/HomeWork6/UnitTest/OrderServiceTests.cs</url>
-          <line>44</line>
-          <properties documentPath="C:\Users\white\RiderProjects\DotNetHomeWork\HomeWork6\UnitTest\OrderServiceTests.cs" initialLine="44" containingFunctionPresentation="method 'XmlImportTest'">
-            <startOffsets>
-              <option value="1140" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1141" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="RiderUnitTests">
+        <watch expression="CS$&lt;&gt;8__locals0.order.DetailsList" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

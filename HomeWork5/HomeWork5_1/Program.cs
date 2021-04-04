@@ -23,7 +23,7 @@ namespace HomeWork5_1
             }
 
 
-            for (int i = 0; i < 5; i++)
+            for (var i = 0; i < 5; i++)
             {
                 OrderService.AddOrder(new Order(
                     new List<OrderDetails>(
