@@ -56,6 +56,8 @@ namespace HomeWork7_1
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.background = new System.Windows.Forms.Panel();
+            this.clean = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -196,9 +198,9 @@ namespace HomeWork7_1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(239, 201);
+            this.button1.Location = new System.Drawing.Point(233, 159);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 86);
+            this.button1.Size = new System.Drawing.Size(184, 76);
             this.button1.TabIndex = 7;
             this.button1.Text = "Draw";
             this.button1.UseVisualStyleBackColor = true;
@@ -237,13 +239,14 @@ namespace HomeWork7_1
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.clean);
             this.panel7.Controls.Add(this.button1);
             this.panel7.Controls.Add(this.flowLayoutPanel1);
             this.panel7.Controls.Add(this.groupBox1);
             this.panel7.Controls.Add(this.flowLayoutPanel2);
-            this.panel7.Location = new System.Drawing.Point(141, 70);
+            this.panel7.Location = new System.Drawing.Point(12, 12);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(488, 345);
+            this.panel7.Size = new System.Drawing.Size(426, 342);
             this.panel7.TabIndex = 12;
             // 
             // flowLayoutPanel1
@@ -355,11 +358,29 @@ namespace HomeWork7_1
             this.label4.Text = "左分支角度";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // background
+            // 
+            this.background.Location = new System.Drawing.Point(489, 12);
+            this.background.Name = "background";
+            this.background.Size = new System.Drawing.Size(420, 331);
+            this.background.TabIndex = 13;
+            // 
+            // clean
+            // 
+            this.clean.Location = new System.Drawing.Point(233, 255);
+            this.clean.Name = "clean";
+            this.clean.Size = new System.Drawing.Size(184, 76);
+            this.clean.TabIndex = 18;
+            this.clean.Text = "clean";
+            this.clean.UseVisualStyleBackColor = true;
+            this.clean.Click += new System.EventHandler(this.clean_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(921, 562);
+            this.ClientSize = new System.Drawing.Size(921, 363);
+            this.Controls.Add(this.background);
             this.Controls.Add(this.panel7);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -383,6 +404,10 @@ namespace HomeWork7_1
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button clean;
+
+        private System.Windows.Forms.Panel background;
 
         #endregion
         private System.Windows.Forms.Panel panel5;

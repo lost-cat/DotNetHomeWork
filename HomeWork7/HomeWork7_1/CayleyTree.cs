@@ -8,7 +8,8 @@ namespace HomeWork7_1
         private readonly Graphics graphics;
         private double th1 = 30 * Math.PI / 180;
 
-        public double Length { get; set; }
+
+        public double Length { get; set; } = 10;
 
         public Pen Pen { get; set; } = Pens.Blue;
 
@@ -40,7 +41,7 @@ namespace HomeWork7_1
             set => per2 = value;
         }
 
-        public int Depth { get; set; }
+        public int Depth { get; set; } = 10;
 
 
         public CayleyTree(Graphics graphics)
@@ -66,6 +67,11 @@ namespace HomeWork7_1
         private void DrawLine(double x0, double y0, double x1, double y1)
         {
             graphics.DrawLine(Pen, (int) x0, (int) y0, (int) x1, (int) y1);
+        }
+
+        public void Clean(Color color)
+        {
+            graphics.Clear(color);
         }
     }
 }
