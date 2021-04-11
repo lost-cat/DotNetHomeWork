@@ -9,7 +9,7 @@ namespace HomeWork7_1
         private double th1 = 30 * Math.PI / 180;
 
 
-        public double Length { get; set; } = 10;
+        public double Length { get; set; } = 50;
 
         public Pen Pen { get; set; } = Pens.Blue;
 

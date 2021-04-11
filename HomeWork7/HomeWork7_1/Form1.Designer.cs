@@ -36,15 +36,17 @@ namespace HomeWork7_1
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.black = new System.Windows.Forms.RadioButton();
+            this.green = new System.Windows.Forms.RadioButton();
             this.aqua = new System.Windows.Forms.RadioButton();
             this.red = new System.Windows.Forms.RadioButton();
             this.blue = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.draw = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.deepth = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.info = new System.Windows.Forms.Label();
+            this.clean = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -57,7 +59,6 @@ namespace HomeWork7_1
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.background = new System.Windows.Forms.Panel();
-            this.clean = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -130,7 +131,7 @@ namespace HomeWork7_1
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.black);
+            this.groupBox1.Controls.Add(this.green);
             this.groupBox1.Controls.Add(this.aqua);
             this.groupBox1.Controls.Add(this.red);
             this.groupBox1.Controls.Add(this.blue);
@@ -141,18 +142,19 @@ namespace HomeWork7_1
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "画笔颜色";
             // 
-            // black
+            // green
             // 
-            this.black.AutoSize = true;
-            this.black.Dock = System.Windows.Forms.DockStyle.Top;
-            this.black.Location = new System.Drawing.Point(3, 78);
-            this.black.Margin = new System.Windows.Forms.Padding(9);
-            this.black.Name = "black";
-            this.black.Size = new System.Drawing.Size(181, 19);
-            this.black.TabIndex = 3;
-            this.black.TabStop = true;
-            this.black.Text = "黑色";
-            this.black.UseVisualStyleBackColor = true;
+            this.green.AutoSize = true;
+            this.green.Dock = System.Windows.Forms.DockStyle.Top;
+            this.green.Location = new System.Drawing.Point(3, 78);
+            this.green.Margin = new System.Windows.Forms.Padding(9);
+            this.green.Name = "green";
+            this.green.Size = new System.Drawing.Size(181, 19);
+            this.green.TabIndex = 3;
+            this.green.TabStop = true;
+            this.green.Text = "绿色";
+            this.green.UseVisualStyleBackColor = true;
+            this.green.CheckedChanged += new System.EventHandler(this.Color_CheckedChanged);
             // 
             // aqua
             // 
@@ -196,15 +198,17 @@ namespace HomeWork7_1
             this.blue.UseVisualStyleBackColor = true;
             this.blue.CheckedChanged += new System.EventHandler(this.Color_CheckedChanged);
             // 
-            // button1
+            // draw
             // 
-            this.button1.Location = new System.Drawing.Point(233, 159);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 76);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Draw";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.draw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.draw.Font = new System.Drawing.Font("宋体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.draw.Location = new System.Drawing.Point(233, 173);
+            this.draw.Name = "draw";
+            this.draw.Size = new System.Drawing.Size(184, 76);
+            this.draw.TabIndex = 7;
+            this.draw.Text = "绘制";
+            this.draw.UseVisualStyleBackColor = true;
+            this.draw.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -239,8 +243,9 @@ namespace HomeWork7_1
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.info);
             this.panel7.Controls.Add(this.clean);
-            this.panel7.Controls.Add(this.button1);
+            this.panel7.Controls.Add(this.draw);
             this.panel7.Controls.Add(this.flowLayoutPanel1);
             this.panel7.Controls.Add(this.groupBox1);
             this.panel7.Controls.Add(this.flowLayoutPanel2);
@@ -248,6 +253,29 @@ namespace HomeWork7_1
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(426, 342);
             this.panel7.TabIndex = 12;
+            // 
+            // info
+            // 
+            this.info.AutoSize = true;
+            this.info.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.info.ForeColor = System.Drawing.Color.Red;
+            this.info.Location = new System.Drawing.Point(233, 138);
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(69, 20);
+            this.info.TabIndex = 19;
+            this.info.Text = "label7";
+            this.info.Visible = false;
+            // 
+            // clean
+            // 
+            this.clean.Font = new System.Drawing.Font("宋体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.clean.Location = new System.Drawing.Point(233, 255);
+            this.clean.Name = "clean";
+            this.clean.Size = new System.Drawing.Size(184, 76);
+            this.clean.TabIndex = 18;
+            this.clean.Text = "清除";
+            this.clean.UseVisualStyleBackColor = true;
+            this.clean.Click += new System.EventHandler(this.clean_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -268,7 +296,7 @@ namespace HomeWork7_1
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(233, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(252, 118);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(190, 121);
             this.flowLayoutPanel2.TabIndex = 17;
             // 
             // panel2
@@ -365,16 +393,6 @@ namespace HomeWork7_1
             this.background.Size = new System.Drawing.Size(420, 331);
             this.background.TabIndex = 13;
             // 
-            // clean
-            // 
-            this.clean.Location = new System.Drawing.Point(233, 255);
-            this.clean.Name = "clean";
-            this.clean.Size = new System.Drawing.Size(184, 76);
-            this.clean.TabIndex = 18;
-            this.clean.Text = "clean";
-            this.clean.UseVisualStyleBackColor = true;
-            this.clean.Click += new System.EventHandler(this.clean_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -394,6 +412,7 @@ namespace HomeWork7_1
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -403,6 +422,7 @@ namespace HomeWork7_1
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Button clean;
@@ -417,11 +437,11 @@ namespace HomeWork7_1
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton black;
+        private System.Windows.Forms.RadioButton green;
         private System.Windows.Forms.RadioButton aqua;
         private System.Windows.Forms.RadioButton red;
         private System.Windows.Forms.RadioButton blue;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button draw;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox deepth;
         private System.Windows.Forms.Label label1;
@@ -437,5 +457,6 @@ namespace HomeWork7_1
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label info;
     }
 }

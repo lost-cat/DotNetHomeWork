@@ -30,7 +30,13 @@ namespace HomeWork7_1
         private void TrunkLength_TextChanged(object sender, EventArgs e)
         {
             if (!(sender is TextBox text)) return;
-            if (!Regex.IsMatch(text.Text, @"^[1-9]\d*$")) return;
+            if (!Regex.IsMatch(text.Text, @"^[1-9]\d*$"))
+            {
+                info.Text = "长度数据不合法";
+                info.Visible = true;
+                return;
+            }
+            info.Visible = false;
             var d = double.Parse(text.Text);
             cayleyTree.Length = d;
         }
@@ -38,7 +44,13 @@ namespace HomeWork7_1
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if (!(sender is TextBox textBox)) return;
-            if (!Regex.IsMatch(textBox.Text, @"^[1-9]\d*$")) return;
+            if (!Regex.IsMatch(textBox.Text, @"^[1-9]\d*$"))
+            {
+                info.Text = "递归深度数据不合法";
+                info.Visible = true;
+                return;
+            }
+            info.Visible = false;
             var d = int.Parse(textBox.Text);
             cayleyTree.Depth = d;
         }
@@ -46,7 +58,11 @@ namespace HomeWork7_1
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
             if (!(sender is TextBox textBox)) return;
-            if (!Regex.IsMatch(textBox.Text, @"^(0.\d+|0|1)$")) return;
+            if (!Regex.IsMatch(textBox.Text, @"^(0.\d+|0|1)$")) {
+                info.Text = "右分支长度比数据不合法";
+                info.Visible = true;
+                return; }
+            info.Visible = false;
             var d = double.Parse(textBox.Text);
             cayleyTree.Per1 = d;
         }
@@ -54,7 +70,13 @@ namespace HomeWork7_1
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             if (!(sender is TextBox textBox)) return;
-            if (!Regex.IsMatch(textBox.Text, @"^(0.\d+|0|1)$")) return;
+            if (!Regex.IsMatch(textBox.Text, @"^(0.\d+|0|1)$"))
+            {
+                info.Text = "左分支长度比数据不合法";
+                info.Visible = true;
+                return;
+            }
+            info.Visible = false;
             var d = double.Parse(textBox.Text);
             cayleyTree.Per2 = d;
         }
@@ -62,7 +84,13 @@ namespace HomeWork7_1
         private void TH1_TextChanged(object sender, EventArgs e)
         {
             if (!(sender is TextBox textBox)) return;
-            if (!Regex.IsMatch(textBox.Text, @"^[1-9]\d*$")) return;
+            if (!Regex.IsMatch(textBox.Text, @"^[1-9]\d*$"))
+            {
+                info.Text = "右分支角度数据不合法";
+                info.Visible = true;
+                return;
+            }
+            info.Visible = false;
             var i = int.Parse(textBox.Text);
             cayleyTree.Th1 = i;
         }
@@ -72,9 +100,11 @@ namespace HomeWork7_1
             if (!(sender is TextBox textBox)) return;
             if (!Regex.IsMatch(textBox.Text, @"^[1-9]\d*$"))
             {
+                info.Text = "左分支角度数据不合法";
+                info.Visible = true;
                 return;
             }
-
+            info.Visible = false;
             var i = int.Parse(textBox.Text);
             cayleyTree.Th2 = i;
         }
@@ -94,15 +124,15 @@ namespace HomeWork7_1
                 case "aqua":
                     cayleyTree.Pen = Pens.Aqua;
                     break;
-                case "black":
-                    cayleyTree.Pen = Pens.Black;
+                case "green":
+                    cayleyTree.Pen = Pens.Green;
                     break;
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cayleyTree.DrawCayleyTree(cayleyTree.Depth, background.Width / 2, background.Height / 2, cayleyTree.Length,
+            cayleyTree.DrawCayleyTree(cayleyTree.Depth, background.Width / 2, background.Height, cayleyTree.Length,
                 30);
         }
 
