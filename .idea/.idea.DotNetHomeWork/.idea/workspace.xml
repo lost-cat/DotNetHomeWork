@@ -15,10 +15,43 @@
     <projectFile>HomeWork4/HomeWork4_2/HomeWork4_2.csproj</projectFile>
     <projectFile>HomeWork5/HomeWork5_1/HomeWork5_1.csproj</projectFile>
     <projectFile>HomeWork7/HomeWork7_1/HomeWork7_1.csproj</projectFile>
+    <projectFile>HomeWork8/HomeWork8_1/HomeWork8_1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4054c0a-bb39-4409-b4c1-e5101fa3ead2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/MySQLUtil.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Properties/DataSources/CayleyTree.datasource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Properties/DataSources/Form1.datasource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Properties/DataSources/HomeWork7_1.Properties.Resources.datasource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Properties/DataSources/HomeWork7_1.Properties.Settings.datasource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Properties/DataSources/Program.datasource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/App.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.resx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/HomeWork8_1.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/DataSources/HomeWork5_1.Customer.datasource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/DataSources/HomeWork5_1.Item.datasource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/DataSources/HomeWork5_1.ItemDescription.datasource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/DataSources/HomeWork5_1.ItemFactory.datasource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/DataSources/HomeWork5_1.Order.datasource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/DataSources/HomeWork5_1.OrderDetails.datasource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/DataSources/HomeWork5_1.OrderService.datasource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/Resources.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/Resources.resx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/Settings.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/Settings.settings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DotNetHomeWork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DotNetHomeWork/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/DotNetHomeWork/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/DotNetHomeWork/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DotNetHomeWork.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DotNetHomeWork.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/HomeWork5_1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/HomeWork5_1.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/mysql.config" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/mysql.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/HomeWork7_1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork7/HomeWork7_1/HomeWork7_1.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +107,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/497E7C03-5433-4AE6-B257-9B219192BCF0/f1/571c51d0/WorkItem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E81851A0-DC73-4A79-AFA9-F5B7273162BE/c3/04713f13/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/96/0b7cad06/Button.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A1CE1C69-6456-4671-9DB9-DFA57CF6B99C/b5/fb7bbb33/ConfigurationManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -116,12 +150,13 @@
       <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/Program.cs" />
       <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/OrderService.cs" />
       <option value="$PROJECT_DIR$/HomeWork6/UnitTest/OrderServiceTests.cs" />
-      <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/mysql.config" />
       <option value="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Program.cs" />
       <option value="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.Designer.cs" />
       <option value="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[81]搜索旋转排序数组 II.cs" />
       <option value="$PROJECT_DIR$/HomeWork7/HomeWork7_1/CayleyTree.cs" />
       <option value="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.cs" />
+      <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/mysql.config" />
+      <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/MySQLUtil.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1p6OnUetM20NoeNuM6fL1HJ0rQk" />
@@ -362,6 +397,24 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="HomeWork8_1" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/HomeWork8/HomeWork8_1/HomeWork8_1.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <configuration name="Homework1_2" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -451,6 +504,9 @@
       <workItem from="1617884988047" duration="4912000" />
       <workItem from="1617927071112" duration="2167000" />
       <workItem from="1617929302989" duration="1286000" />
+      <workItem from="1618113688262" duration="874000" />
+      <workItem from="1618115748117" duration="8000" />
+      <workItem from="1618365403114" duration="1529000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1614500886720</created>
@@ -676,7 +732,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617929774936</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="第七次作业">
+      <created>1618113706738</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1618113706738</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

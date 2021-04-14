@@ -36,6 +36,7 @@
           <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
         </Reference>
         <Reference Include="System" />
+        <Reference Include="System.Configuration" />
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
         <Reference Include="System.Xml" />
@@ -45,6 +46,7 @@
         <Compile Include="Item.cs" />
         <Compile Include="ItemDescription.cs" />
         <Compile Include="ItemFactory.cs" />
+        <Compile Include="MySQLUtil.cs" />
         <Compile Include="Order.cs" />
         <Compile Include="OrderDetails.cs" />
         <Compile Include="OrderService.cs" />

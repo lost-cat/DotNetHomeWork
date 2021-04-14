@@ -29,11 +29,12 @@ namespace HomeWork7_1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel5 = new System.Windows.Forms.Panel();
             this.TrunkLength = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.rightScale = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.green = new System.Windows.Forms.RadioButton();
@@ -42,7 +43,7 @@ namespace HomeWork7_1
             this.blue = new System.Windows.Forms.RadioButton();
             this.draw = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.deepth = new System.Windows.Forms.TextBox();
+            this.rightAngle = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.info = new System.Windows.Forms.Label();
@@ -50,15 +51,17 @@ namespace HomeWork7_1
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.deepth = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.leftScale = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.leftAngle = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.background = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cayleyTreeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -69,6 +72,7 @@ namespace HomeWork7_1
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cayleyTreeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -102,22 +106,22 @@ namespace HomeWork7_1
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.textBox4);
+            this.panel6.Controls.Add(this.rightScale);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Location = new System.Drawing.Point(3, 37);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(181, 28);
             this.panel6.TabIndex = 4;
             // 
-            // textBox4
+            // rightScale
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox4.Location = new System.Drawing.Point(120, 0);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(61, 25);
-            this.textBox4.TabIndex = 1;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.rightScale.BackColor = System.Drawing.SystemColors.Window;
+            this.rightScale.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rightScale.Location = new System.Drawing.Point(120, 0);
+            this.rightScale.Name = "rightScale";
+            this.rightScale.Size = new System.Drawing.Size(61, 25);
+            this.rightScale.TabIndex = 1;
+            this.rightScale.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label6
             // 
@@ -212,7 +216,7 @@ namespace HomeWork7_1
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.deepth);
+            this.panel1.Controls.Add(this.rightAngle);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(3, 71);
             this.panel1.Name = "panel1";
@@ -220,15 +224,15 @@ namespace HomeWork7_1
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // deepth
+            // rightAngle
             // 
-            this.deepth.BackColor = System.Drawing.SystemColors.Window;
-            this.deepth.Dock = System.Windows.Forms.DockStyle.Right;
-            this.deepth.Location = new System.Drawing.Point(120, 0);
-            this.deepth.Name = "deepth";
-            this.deepth.Size = new System.Drawing.Size(61, 25);
-            this.deepth.TabIndex = 1;
-            this.deepth.TextChanged += new System.EventHandler(this.TH1_TextChanged);
+            this.rightAngle.BackColor = System.Drawing.SystemColors.Window;
+            this.rightAngle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rightAngle.Location = new System.Drawing.Point(120, 0);
+            this.rightAngle.Name = "rightAngle";
+            this.rightAngle.Size = new System.Drawing.Size(61, 25);
+            this.rightAngle.TabIndex = 1;
+            this.rightAngle.TextChanged += new System.EventHandler(this.TH1_TextChanged);
             // 
             // label1
             // 
@@ -301,22 +305,22 @@ namespace HomeWork7_1
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.deepth);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(181, 28);
             this.panel2.TabIndex = 5;
             // 
-            // textBox1
+            // deepth
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox1.Location = new System.Drawing.Point(107, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(74, 25);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.deepth.BackColor = System.Drawing.SystemColors.Window;
+            this.deepth.Dock = System.Windows.Forms.DockStyle.Right;
+            this.deepth.Location = new System.Drawing.Point(107, 0);
+            this.deepth.Name = "deepth";
+            this.deepth.Size = new System.Drawing.Size(74, 25);
+            this.deepth.TabIndex = 1;
+            this.deepth.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -330,22 +334,22 @@ namespace HomeWork7_1
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.leftScale);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(3, 37);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(181, 28);
             this.panel3.TabIndex = 4;
             // 
-            // textBox2
+            // leftScale
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox2.Location = new System.Drawing.Point(107, 0);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(74, 25);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.leftScale.BackColor = System.Drawing.SystemColors.Window;
+            this.leftScale.Dock = System.Windows.Forms.DockStyle.Right;
+            this.leftScale.Location = new System.Drawing.Point(107, 0);
+            this.leftScale.Name = "leftScale";
+            this.leftScale.Size = new System.Drawing.Size(74, 25);
+            this.leftScale.TabIndex = 1;
+            this.leftScale.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -359,22 +363,22 @@ namespace HomeWork7_1
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBox8);
+            this.panel4.Controls.Add(this.leftAngle);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(3, 71);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(181, 28);
             this.panel4.TabIndex = 0;
             // 
-            // textBox8
+            // leftAngle
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox8.Location = new System.Drawing.Point(107, 0);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(74, 25);
-            this.textBox8.TabIndex = 1;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.leftAngle.BackColor = System.Drawing.SystemColors.Window;
+            this.leftAngle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.leftAngle.Location = new System.Drawing.Point(107, 0);
+            this.leftAngle.Name = "leftAngle";
+            this.leftAngle.Size = new System.Drawing.Size(74, 25);
+            this.leftAngle.TabIndex = 1;
+            this.leftAngle.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // label4
             // 
@@ -388,16 +392,30 @@ namespace HomeWork7_1
             // 
             // background
             // 
-            this.background.Location = new System.Drawing.Point(489, 12);
+            this.background.Location = new System.Drawing.Point(606, 12);
             this.background.Name = "background";
-            this.background.Size = new System.Drawing.Size(420, 331);
+            this.background.Size = new System.Drawing.Size(303, 216);
             this.background.TabIndex = 13;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(457, 59);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 14;
+            // 
+            // cayleyTreeBindingSource
+            // 
+            this.cayleyTreeBindingSource.DataSource = typeof(HomeWork7_1.CayleyTree);
+           
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 363);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.background);
             this.Controls.Add(this.panel7);
             this.Name = "Form1";
@@ -421,6 +439,7 @@ namespace HomeWork7_1
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cayleyTreeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -434,7 +453,7 @@ namespace HomeWork7_1
         private System.Windows.Forms.TextBox TrunkLength;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox rightScale;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton green;
@@ -443,20 +462,22 @@ namespace HomeWork7_1
         private System.Windows.Forms.RadioButton blue;
         private System.Windows.Forms.Button draw;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox deepth;
+        private System.Windows.Forms.TextBox rightAngle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox deepth;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox leftScale;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox leftAngle;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label info;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource cayleyTreeBindingSource;
     }
 }

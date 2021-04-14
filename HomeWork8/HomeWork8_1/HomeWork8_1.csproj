@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BC0417EC-CC31-4275-99D6-C835912E626A}</ProjectGuid>
+    <ProjectGuid>{33F32CCA-8DED-4ED9-AC89-BF6C8E4C4242}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>HomeWork7_1</RootNamespace>
-    <AssemblyName>HomeWork7_1</AssemblyName>
+    <RootNamespace>HomeWork8_1</RootNamespace>
+    <AssemblyName>HomeWork8_1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CayleyTree.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,11 +66,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Properties\DataSources\CayleyTree.datasource" />
-    <None Include="Properties\DataSources\Form1.datasource" />
-    <None Include="Properties\DataSources\HomeWork7_1.Properties.Resources.datasource" />
-    <None Include="Properties\DataSources\HomeWork7_1.Properties.Settings.datasource" />
-    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\HomeWork5_1.Customer.datasource" />
+    <None Include="Properties\DataSources\HomeWork5_1.Item.datasource" />
+    <None Include="Properties\DataSources\HomeWork5_1.ItemDescription.datasource" />
+    <None Include="Properties\DataSources\HomeWork5_1.ItemFactory.datasource" />
+    <None Include="Properties\DataSources\HomeWork5_1.Order.datasource" />
+    <None Include="Properties\DataSources\HomeWork5_1.OrderDetails.datasource" />
+    <None Include="Properties\DataSources\HomeWork5_1.OrderService.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -84,6 +85,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\HomeWork5\HomeWork5_1\HomeWork5_1.csproj">
+      <Project>{1f266298-d712-419c-a70f-52b507abc48d}</Project>
+      <Name>HomeWork5_1</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

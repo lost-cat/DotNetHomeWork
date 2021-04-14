@@ -25,6 +25,14 @@ namespace HomeWork7_1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            deepth.DataBindings.Add("Text", cayleyTree, "Depth");
+            TrunkLength.DataBindings.Add("Text", cayleyTree,"Length");
+            rightScale.DataBindings.Add("Text", cayleyTree, "Per1");
+            leftScale.DataBindings.Add("Text", cayleyTree, "Per2");
+            rightAngle.DataBindings.Add("Text", cayleyTree, "Th1");
+           leftAngle.DataBindings.Add("Text", cayleyTree, "Th2");
+
+
         }
 
         private void TrunkLength_TextChanged(object sender, EventArgs e)
