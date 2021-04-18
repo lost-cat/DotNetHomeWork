@@ -7,6 +7,7 @@ namespace HomeWork5_1
     {
         public static void Main(string[] args)
         {
+            /*
             var random = new Random();
             var items = new Item[10];
             for (var index = 0; index < items.Length; index++)
@@ -51,6 +52,7 @@ namespace HomeWork5_1
             {
                 Console.WriteLine(details);
             }
+            */
 
             
         }

@@ -6,11 +6,11 @@ using System.Xml.Serialization;
 
 namespace HomeWork5_1
 {
-    public static class OrderService
+    public  class OrderService
     {
-        private static List<Order> _orders = new List<Order>();
+        public  List<Order> _orders = new List<Order>();
 
-        public static void AddOrder(Order order)
+        public  void AddOrder(Order order)
         {
             if (order == null)
             {
@@ -28,7 +28,7 @@ namespace HomeWork5_1
         ///     删除符合条件的order
         /// </summary>
         /// <param name="predicate">通过给定条件匹配对应的order</param>
-        public static void DeleteOrder(Predicate<Order> predicate)
+        public  void DeleteOrder(Predicate<Order> predicate)
         {
             var enumerable = _orders.Where(o => predicate(o));
             var orders = enumerable.ToArray();
@@ -44,7 +44,7 @@ namespace HomeWork5_1
         /// </summary>
         /// <param name="predicate">筛选条件</param>
         /// <param name="action">对筛选后的order执行的操作</param>
-        public static void ModifyOrder(Predicate<Order> predicate, Action<Order> action)
+        public  void ModifyOrder(Predicate<Order> predicate, Action<Order> action)
         {
             foreach (var order in _orders.Where(order => predicate(order)))
             {
@@ -61,7 +61,7 @@ namespace HomeWork5_1
         /// <param name="orderId"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public static Order QueryOrderById(int orderId)
+        public  Order QueryOrderById(int orderId)
         {
             var order = _orders.Find(o => o.OrderId == orderId);
             if (order == null) throw new Exception("该订单不存在");
@@ -74,7 +74,7 @@ namespace HomeWork5_1
         /// </summary>
         /// <param name="predicate"></param>
         /// <returns></returns>
-        public static List<Order> QueryOrder(Predicate<Order> predicate)
+        public  List<Order> QueryOrder(Predicate<Order> predicate)
         {
             var orders = _orders.Where(o => predicate(o));
             return orders.OrderBy(o => o.TotalMoney).ToList();
@@ -85,7 +85,7 @@ namespace HomeWork5_1
         /// </summary>
         /// <param name="itemDescription"></param>
         /// <returns></returns>
-        public static List<Order> QueryOrderByItemName(ItemDescription itemDescription)
+        public  List<Order> QueryOrderByItemName(ItemDescription itemDescription)
         {
             var orders = _orders
                 .Where(order => order.DetailsList
@@ -99,12 +99,12 @@ namespace HomeWork5_1
         ///     对orderList进行排序，如果不传入比较器则默认按照id排序
         /// </summary>
         /// <param name="comparison">带传入的比较器，可以不写</param>
-        public static void Sort(Comparison<Order> comparison = null)
+        public  void Sort(Comparison<Order> comparison = null)
         {
             _orders.Sort(comparison ?? ((order, order1) => order.OrderId - order1.OrderId));
         }
 
-        public static void AddOrderDetails(Order order, OrderDetails orderDetails)
+        public  void AddOrderDetails(Order order, OrderDetails orderDetails)
         {
             if (order.DetailsList.Exists(o => Equals(o, orderDetails))) throw new Exception("该订单明细已存在于该订单！");
 
@@ -115,7 +115,7 @@ namespace HomeWork5_1
         ///     将对应的order数据导出到指定path的xml文件上.
         /// </summary>
         /// <param name="path">所要导入xml的位置</param>
-        public static void Export(string path)
+        public  void Export(string path)
         {
             using (var stream = File.Create(path))
             {
@@ -128,7 +128,7 @@ namespace HomeWork5_1
         ///     载入指定xml文件中的订单
         /// </summary>
         /// <param name="path">指定的xml路径</param>
-        public static void Import(string path)
+        public  void Import(string path)
         {
             using (var stream = File.Open(path, FileMode.Open))
             {

@@ -13,7 +13,8 @@
   &lt;Project Location="C:\Users\white\RiderProjects\DotNetHomeWork\HomeWork6\UnitTest" Presentation="&amp;lt;UnitTest&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=HomeWork7_005F1_002FForm1/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=HomeWork7_005F1_002FForm1/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=HomeWork8_005F1_002FForm1/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean>
 	
 	</wpf:ResourceDictionary>
