@@ -15,7 +15,7 @@ namespace HomeWork5_1
                 case 0:
 
                     return new Item(Random.Next(1000), new ItemDescription(itemType,
-                        10, "大米"));
+                        10, "龙虾"));
                 case 1:
                     return new Item(Random.Next(1000), new ItemDescription(itemType,
                         20, "牛肉"));
@@ -23,7 +23,7 @@ namespace HomeWork5_1
                 case 2:
 
                     return new Item(Random.Next(1000), new ItemDescription(itemType,
-                        30, "龙虾"));
+                        30, "猪肉"));
                 default:
                     throw new Exception($"编号为{itemType}的商品不存在");
             }

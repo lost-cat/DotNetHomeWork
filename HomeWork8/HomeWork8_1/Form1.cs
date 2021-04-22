@@ -7,6 +7,8 @@ namespace HomeWork8_1
 {
     public partial class Form1 : Form
     {
+        private List<Order> allOrders;
+        private List<Order> filterOrders;
         private readonly OrderService service = new OrderService();
 
         public Form1()
@@ -38,11 +40,18 @@ namespace HomeWork8_1
             }
 
             InitializeComponent();
-            OrderView.DataSource = service._orders;
+
+            orderBindingSource.DataSource = service._orders.ToArray();
+
+            DetailsView.Enabled = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.ColumnIndex < 0 || e.RowIndex < 0)
+            {
+                return;
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -52,7 +61,8 @@ namespace HomeWork8_1
 
         private void CreateOrder_Click(object sender, EventArgs e)
         {
-            
+            var orderForm = new OrderForm(service);
+            orderForm.ShowDialog();
         }
 
         private void orderBindingSource_CurrentChanged(object sender, EventArgs e)
@@ -60,7 +70,17 @@ namespace HomeWork8_1
         }
 
         private void OrderView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        { 
+        {
+            if (e.ColumnIndex < 0 || e.RowIndex < 0)
+            {
+                return;
+            }
+
+            if (e.RowIndex > service._orders.Count)
+            {
+                return;
+            }
+
             if (!(sender is DataGridView gridView)) return;
             var cell = gridView[0, e.RowIndex];
             var id = (int) cell.Value;
@@ -68,6 +88,24 @@ namespace HomeWork8_1
             var order = service.QueryOrderById(id);
             DetailsView.DataSource = order;
             DetailsView.DataMember = "DetailsList";
+        }
+
+        private void DetailsView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            orderBindingSource.DataSource = service._orders.ToArray();
+        }
+
+        private void QueryOrder_Click(object sender, EventArgs e)
+        {
+            if (textBoxSearchContent.TextLength == 0)
+            {
+                return;
+            }
+            
         }
     }
 }

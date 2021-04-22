@@ -19,32 +19,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4054c0a-bb39-4409-b4c1-e5101fa3ead2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/OrderForm.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/OrderForm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/OrderForm.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/orderdbDataSet.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/orderdbDataSet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/orderdbDataSet.xsc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/orderdbDataSet.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/orderdbDataSet.xss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DotNetHomeWork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DotNetHomeWork/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/DotNetHomeWork/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/DotNetHomeWork/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DotNetHomeWork.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/DotNetHomeWork.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/HomeWork5_1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/HomeWork5_1.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/MySQLUtil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/MySQLUtil.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/ItemFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/ItemFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/OrderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/OrderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/mysql.config" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/mysql.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork6/UnitTest/OrderServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork6/UnitTest/OrderServiceTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork6/UnitTest/UnitTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork6/UnitTest/UnitTest.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/App.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/HomeWork8_1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/HomeWork8_1.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/OrderForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/OrderForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/OrderForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/OrderForm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/Settings.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/Settings.settings" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Properties/Settings.settings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,12 +143,12 @@
       <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/MySQLUtil.cs" />
       <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/mysql.config" />
       <option value="$PROJECT_DIR$/HomeWork6/UnitTest/OrderServiceTests.cs" />
-      <option value="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Program.cs" />
       <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/Program.cs" />
       <option value="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Test.cs" />
       <option value="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Test.Designer.cs" />
-      <option value="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.cs" />
+      <option value="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Program.cs" />
       <option value="$PROJECT_DIR$/HomeWork8/HomeWork8_1/OrderForm.cs" />
+      <option value="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1p6OnUetM20NoeNuM6fL1HJ0rQk" />
@@ -180,7 +163,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3504449" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35408023" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -524,6 +507,12 @@
       <workItem from="1618535457693" duration="1884000" />
       <workItem from="1618537423448" duration="3107000" />
       <workItem from="1618555545870" duration="1790000" />
+      <workItem from="1618725123458" duration="71000" />
+      <workItem from="1618725385676" duration="143000" />
+      <workItem from="1618747742019" duration="2555000" />
+      <workItem from="1618753192638" duration="900000" />
+      <workItem from="1618842179381" duration="1726000" />
+      <workItem from="1618920843179" duration="681000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1614500886720</created>
@@ -763,7 +752,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618367175164</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="第八次作业">
+      <created>1618725148593</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1618725148593</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -866,7 +862,8 @@
     <MESSAGE value="第七次代码" />
     <MESSAGE value="第七次作业" />
     <MESSAGE value="添加数据库支持" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加数据库支持" />
+    <MESSAGE value="第八次作业" />
+    <option name="LAST_COMMIT_MESSAGE" value="第八次作业" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

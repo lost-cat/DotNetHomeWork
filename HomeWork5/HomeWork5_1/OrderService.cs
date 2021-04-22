@@ -10,6 +10,10 @@ namespace HomeWork5_1
     {
         public  List<Order> _orders = new List<Order>();
 
+        public int MaxId { get
+            {
+                return _orders.Max(o => o.OrderId);
+            } }
         public  void AddOrder(Order order)
         {
             if (order == null)
