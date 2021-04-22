@@ -16,18 +16,20 @@
     <projectFile>HomeWork5/HomeWork5_1/HomeWork5_1.csproj</projectFile>
     <projectFile>HomeWork7/HomeWork7_1/HomeWork7_1.csproj</projectFile>
     <projectFile>HomeWork8/HomeWork8_1/HomeWork8_1.csproj</projectFile>
+    <projectFile>HomeWork9/HomeWork9_1/HomeWork9_1.csproj</projectFile>
+    <projectFile>HomeWork9/HomeWork9_2/HomeWork9_2.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4054c0a-bb39-4409-b4c1-e5101fa3ead2" name="Default Changelist" comment="">
+    <list default="true" id="b4054c0a-bb39-4409-b4c1-e5101fa3ead2" name="Default Changelist" comment="第八次作业">
+      <change afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_1/Crawler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_1/HomeWork9_1.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_1/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_1/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_2/HomeWork9_2.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_2/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_2/Properties/AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DotNetHomeWork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DotNetHomeWork/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/DotNetHomeWork/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/DotNetHomeWork/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/ItemFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/ItemFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/OrderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/OrderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/OrderForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/OrderForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/OrderForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/OrderForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DotNetHomeWork.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DotNetHomeWork.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,10 +100,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/HomeWork1/Homework1_2/Form1.cs" />
-      <option value="$PROJECT_DIR$/HomeWork2/HomeWork2/Program.cs" />
-      <option value="$PROJECT_DIR$/WpfApplication1/MainWindow.xaml" />
-      <option value="$PROJECT_DIR$/HomeWork2/HomeWork2_2/Program.cs" />
       <option value="$PROJECT_DIR$/HomeWork2/HomeWork2_3/Program.cs" />
       <option value="$PROJECT_DIR$/HomeWork2/HomeWork2_1/Program.cs" />
       <option value="$PROJECT_DIR$/HomeWork2/HomeWork2_4/Program.cs" />
@@ -149,6 +147,10 @@
       <option value="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Program.cs" />
       <option value="$PROJECT_DIR$/HomeWork8/HomeWork8_1/OrderForm.cs" />
       <option value="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.cs" />
+      <option value="$PROJECT_DIR$/HomeWork9/HomeWork9_2/Program.cs" />
+      <option value="$PROJECT_DIR$/HomeWork9/HomeWork9_1/Crwaler.cs" />
+      <option value="$PROJECT_DIR$/HomeWork9/HomeWork9_1/Crawler.cs" />
+      <option value="$PROJECT_DIR$/HomeWork9/HomeWork9_1/Program.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1p6OnUetM20NoeNuM6fL1HJ0rQk" />
@@ -173,7 +175,7 @@
     <property name="settings.editor.selected.configurable" value="database.main" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.HomeWork8_1">
+  <component name="RunManager" selected=".NET Project.HomeWork9_1">
     <configuration name="HomeWork1_1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -408,6 +410,42 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="HomeWork9_1" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/HomeWork9/HomeWork9_1/HomeWork9_1.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="HomeWork9_2" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/HomeWork9/HomeWork9_2/HomeWork9_2.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <configuration name="Homework1_2" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -513,6 +551,7 @@
       <workItem from="1618753192638" duration="900000" />
       <workItem from="1618842179381" duration="1726000" />
       <workItem from="1618920843179" duration="681000" />
+      <workItem from="1619061906721" duration="7203000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1614500886720</created>
@@ -759,7 +798,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618725148593</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="第八次作业">
+      <created>1619061930288</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1619061930288</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
