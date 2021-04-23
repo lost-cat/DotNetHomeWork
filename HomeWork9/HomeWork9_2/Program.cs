@@ -8,7 +8,7 @@ namespace HomeWork9_2
     {
         public static void Main(string[] args)
         {
-            using (TcpClient client = new TcpClient("127.0.0.1", 10000))
+            using (var client = new TcpClient("127.0.0.1", 11000))
             {
                 Console.WriteLine($"连接成功输入信息:");
                 using (var stream = client.GetStream())

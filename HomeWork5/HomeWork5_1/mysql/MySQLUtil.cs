@@ -25,5 +25,17 @@ namespace HomeWork5_1.mysql
             var connection = new MySqlConnection(builder.ConnectionString);
             return connection;
         }
+
+        public static void QueryDb(string query)
+        {
+            using (var connection = GetConnection())
+            {
+                
+                
+                
+                
+                
+            }
+        }
     }
 }

@@ -20,16 +20,15 @@
     <projectFile>HomeWork9/HomeWork9_2/HomeWork9_2.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4054c0a-bb39-4409-b4c1-e5101fa3ead2" name="Default Changelist" comment="第八次作业">
-      <change afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_1/Crawler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_1/HomeWork9_1.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_1/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_1/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_2/HomeWork9_2.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_2/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_2/Properties/AssemblyInfo.cs" afterDir="false" />
+    <list default="true" id="b4054c0a-bb39-4409-b4c1-e5101fa3ead2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_2/SimpleCrawler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DotNetHomeWork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DotNetHomeWork/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DotNetHomeWork.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DotNetHomeWork.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DotNetHomeWork.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/DotNetHomeWork.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/HomeWork5_1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/HomeWork5_1.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/MySQLUtil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/MySQLUtil.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork9/HomeWork9_1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_1/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork9/HomeWork9_2/HomeWork9_2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_2/HomeWork9_2.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork9/HomeWork9_2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork9/HomeWork9_2/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,8 +99,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/HomeWork2/HomeWork2_3/Program.cs" />
-      <option value="$PROJECT_DIR$/HomeWork2/HomeWork2_1/Program.cs" />
       <option value="$PROJECT_DIR$/HomeWork2/HomeWork2_4/Program.cs" />
       <option value="$PROJECT_DIR$/HomeWork1/HomeWork1_1/Program.cs" />
       <option value="$PROJECT_DIR$/HomeWork3/HomeWork3_1/Shape.cs" />
@@ -138,7 +135,6 @@
       <option value="$PROJECT_DIR$/HomeWork7/HomeWork7_1/Form1.cs" />
       <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/MySQLUtil.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/consoles/db/8c67c1d8-e236-489e-8253-957400846f5c/console.sql" />
-      <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/MySQLUtil.cs" />
       <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/mysql.config" />
       <option value="$PROJECT_DIR$/HomeWork6/UnitTest/OrderServiceTests.cs" />
       <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/Program.cs" />
@@ -147,10 +143,13 @@
       <option value="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Program.cs" />
       <option value="$PROJECT_DIR$/HomeWork8/HomeWork8_1/OrderForm.cs" />
       <option value="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.cs" />
-      <option value="$PROJECT_DIR$/HomeWork9/HomeWork9_2/Program.cs" />
       <option value="$PROJECT_DIR$/HomeWork9/HomeWork9_1/Crwaler.cs" />
       <option value="$PROJECT_DIR$/HomeWork9/HomeWork9_1/Crawler.cs" />
+      <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/mysql/MySQLUtil.cs" />
       <option value="$PROJECT_DIR$/HomeWork9/HomeWork9_1/Program.cs" />
+      <option value="$PROJECT_DIR$/HomeWork9/HomeWork9_2/Program.cs" />
+      <option value="$PROJECT_DIR$/HomeWork9/HomeWork9_2/SimpleCrawler.cs" />
+      <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/App.config" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1p6OnUetM20NoeNuM6fL1HJ0rQk" />
@@ -175,7 +174,7 @@
     <property name="settings.editor.selected.configurable" value="database.main" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.HomeWork9_1">
+  <component name="RunManager" selected=".NET Project.HomeWork9_2">
     <configuration name="HomeWork1_1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -551,7 +550,8 @@
       <workItem from="1618753192638" duration="900000" />
       <workItem from="1618842179381" duration="1726000" />
       <workItem from="1618920843179" duration="681000" />
-      <workItem from="1619061906721" duration="7203000" />
+      <workItem from="1619061906721" duration="7496000" />
+      <workItem from="1619136057087" duration="6952000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1614500886720</created>
@@ -805,7 +805,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619061930288</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="第九次作业">
+      <created>1619085886390</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1619085886390</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -909,7 +916,8 @@
     <MESSAGE value="第七次作业" />
     <MESSAGE value="添加数据库支持" />
     <MESSAGE value="第八次作业" />
-    <option name="LAST_COMMIT_MESSAGE" value="第八次作业" />
+    <MESSAGE value="第九次作业" />
+    <option name="LAST_COMMIT_MESSAGE" value="第九次作业" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
