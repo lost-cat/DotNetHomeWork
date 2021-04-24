@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 
 namespace HomeWork9_2
 {
@@ -8,20 +9,9 @@ namespace HomeWork9_2
     {
         public static void Main(string[] args)
         {
-            using (var client = new TcpClient("127.0.0.1", 11000))
-            {
-                Console.WriteLine($"连接成功输入信息:");
-                using (var stream = client.GetStream())
-                {
-                    string message;
-                    do
-                    {
-                        message = Console.ReadLine();
-                        var bytes = Encoding.UTF8.GetBytes(message ?? string.Empty);
-                        stream.Write(bytes, 0, bytes.Length);
-                    } while (message != "q");
-                }
-            }
+            SimpleCrawler crawler = new SimpleCrawler("www.baidu.com");
+            new Thread(crawler.Crawl).Start();
+
         }
     }
 }

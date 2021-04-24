@@ -35,6 +35,10 @@
         <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
           <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
         </Reference>
+        <Reference Include="SqlSugar, Version=5.0.2.8, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\packages\SqlSugar.5.0.2.8\lib\SqlSugar.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
         <Reference Include="System" />
         <Reference Include="System.ComponentModel.DataAnnotations" />
         <Reference Include="System.Configuration" />
@@ -44,6 +48,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Customer.cs" />
+        <Compile Include="DefaultContext.cs" />
         <Compile Include="Item.cs" />
         <Compile Include="ItemDescription.cs" />
         <Compile Include="ItemFactory.cs" />
@@ -57,6 +62,7 @@
     <ItemGroup>
       <None Include="App.config" />
       <None Include="mysql\mysql.config" />
+      <None Include="packages.config" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

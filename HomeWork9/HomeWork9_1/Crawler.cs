@@ -33,7 +33,7 @@ namespace HomeWork9_1
                     current = url;
                 }
 
-                if (current == null || count > 1000)
+                if (current == null || count > 10)
                 {
                     break;
                 }

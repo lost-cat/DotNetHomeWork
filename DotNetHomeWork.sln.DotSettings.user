@@ -8,6 +8,7 @@
   &lt;Assembly Path="C:\Users\white\RiderProjects\DotNetHomeWork\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Users\white\RiderProjects\DotNetHomeWork\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Users\white\RiderProjects\DotNetHomeWork\packages\SqlSugar.5.0.2.8\lib\SqlSugar.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
 	<s:Boolean x:Key="/Default/Environment/Hierarchy/EntityFrameworkOptions/IsAlreadyNotifiedAboutEntityFramework/@EntryValue">True</s:Boolean>
 	

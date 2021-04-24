@@ -19,8 +19,12 @@ namespace HomeWork9_2
         //   myCrawler.urls.Add(startUrl, false);//加入初始页面
         //   new Thread(myCrawler.Crawl).Start();
         // }
+        public SimpleCrawler(string url)
+        {
+            urls.Add(url,false);
+        }
 
-        private void Crawl()
+        public void Crawl()
         {
             Console.WriteLine("开始爬行了.... ");
             while (true)
@@ -54,8 +58,8 @@ namespace HomeWork9_2
             {
                 WebClient webClient = new WebClient();
                 webClient.Encoding = Encoding.UTF8;
-                string html = webClient.DownloadString(url);
-                string fileName = count.ToString();
+                var html = webClient.DownloadString(url);
+                var fileName = count.ToString();
                 File.WriteAllText(fileName, html, Encoding.UTF8);
                 return html;
             }
@@ -68,8 +72,8 @@ namespace HomeWork9_2
 
         private void Parse(string html)
         {
-            string strRef = @"(href|HREF)[]*=[]*[""'][^""'#>]+[""']";
-            MatchCollection matches = new Regex(strRef).Matches(html);
+            var strRef = @"(href|HREF)[]*=[]*[""'][^""'#>]+[(jsp|html|aspx)][""']";
+            var matches = new Regex(strRef).Matches(html);
             foreach (Match match in matches)
             {
                 strRef = match.Value.Substring(match.Value.IndexOf('=') + 1)
