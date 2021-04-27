@@ -9,7 +9,7 @@ namespace HomeWork9_2
     {
         public static void Main(string[] args)
         {
-            SimpleCrawler crawler = new SimpleCrawler("www.baidu.com");
+            SimpleCrawler crawler = new SimpleCrawler(@"https://blog.csdn.net");
             new Thread(crawler.Crawl).Start();
 
         }

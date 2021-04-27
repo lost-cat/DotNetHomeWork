@@ -10,18 +10,13 @@ namespace HomeWork9_2
     class SimpleCrawler
     {
         private readonly Hashtable urls = new Hashtable();
-
-        private int count = 0;
-        // static void Main(string[] args) {
-        //   SimpleCrawler myCrawler = new SimpleCrawler();
-        //   string startUrl = "http://www.cnblogs.com/dstang2000/";
-        //   if (args.Length >= 1) startUrl = args[0];
-        //   myCrawler.urls.Add(startUrl, false);//加入初始页面
-        //   new Thread(myCrawler.Crawl).Start();
-        // }
+        private readonly string startUrl;
+        private int count;
+        
         public SimpleCrawler(string url)
         {
-            urls.Add(url,false);
+            startUrl = url;
+            urls.Add(startUrl, false);
         }
 
         public void Crawl()
@@ -33,12 +28,6 @@ namespace HomeWork9_2
                 foreach (string url in urls.Keys)
                 {
                     if ((bool) urls[url]) continue;
-                    Regex regex = new Regex(@"$.(jsp|html|aspx)");
-                    if (!regex.IsMatch(url))
-                    {
-                        continue;
-                    }
-
                     current = url;
                 }
 
@@ -48,16 +37,16 @@ namespace HomeWork9_2
                 urls[current] = true;
                 count++;
                 Parse(html); //解析,并加入新的链接
-                Console.WriteLine("爬行结束");
             }
+
+            Console.WriteLine("爬行结束");
         }
 
         private string DownLoad(string url)
         {
             try
             {
-                WebClient webClient = new WebClient();
-                webClient.Encoding = Encoding.UTF8;
+                var webClient = new WebClient {Encoding = Encoding.UTF8};
                 var html = webClient.DownloadString(url);
                 var fileName = count.ToString();
                 File.WriteAllText(fileName, html, Encoding.UTF8);
@@ -72,13 +61,18 @@ namespace HomeWork9_2
 
         private void Parse(string html)
         {
-            var strRef = @"(href|HREF)[]*=[]*[""'][^""'#>]+[(jsp|html|aspx)][""']";
+            var strRef = @"(href|HREF)[]*=[]*[""'][^""'#>]+(jsp|html|aspx)[""']";
             var matches = new Regex(strRef).Matches(html);
             foreach (Match match in matches)
             {
                 strRef = match.Value.Substring(match.Value.IndexOf('=') + 1)
                     .Trim('"', '\"', '#', '>');
                 if (strRef.Length == 0) continue;
+                if (!strRef.StartsWith(startUrl))
+                {
+                    continue;
+                }
+
                 if (urls[strRef] == null) urls[strRef] = false;
             }
         }
