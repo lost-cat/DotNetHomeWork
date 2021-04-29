@@ -7,7 +7,7 @@ namespace HomeWork5_1
         private static readonly Random Random = new Random();
 
         //通过商品type获取对应的商品
-        //todo 如何创建id不重复的随机数？
+       
         public static Item GetItem(int itemType)
         {
             switch (itemType)

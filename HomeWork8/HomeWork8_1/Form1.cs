@@ -7,8 +7,7 @@ namespace HomeWork8_1
 {
     public partial class Form1 : Form
     {
-        private List<Order> allOrders;
-        private List<Order> filterOrders;
+       
         private readonly OrderService service = new OrderService();
 
         public Form1()

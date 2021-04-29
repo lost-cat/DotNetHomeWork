@@ -4,6 +4,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace HomeWork9_2
 {
@@ -12,14 +13,14 @@ namespace HomeWork9_2
         private readonly Hashtable urls = new Hashtable();
         private readonly string startUrl;
         private int count;
-        
+
         public SimpleCrawler(string url)
         {
             startUrl = url;
             urls.Add(startUrl, false);
         }
 
-        public void Crawl()
+        public  void Crawl()
         {
             Console.WriteLine("开始爬行了.... ");
             while (true)
@@ -33,24 +34,26 @@ namespace HomeWork9_2
 
                 if (current == null || count > 10) break;
                 Console.WriteLine("爬行" + current + "页面!");
-                var html = DownLoad(current); // 下载
+                var task = DownLoad(current); // 下载
                 urls[current] = true;
                 count++;
+                var html = task.Result;
                 Parse(html); //解析,并加入新的链接
             }
 
             Console.WriteLine("爬行结束");
         }
 
-        private string DownLoad(string url)
+        private async Task<string> DownLoad(string url)
         {
             try
             {
                 var webClient = new WebClient {Encoding = Encoding.UTF8};
-                var html = webClient.DownloadString(url);
+                var task = webClient.DownloadStringTaskAsync(url);
                 var fileName = count.ToString();
-                File.WriteAllText(fileName, html, Encoding.UTF8);
-                return html;
+                var result = await task;
+                File.WriteAllText(fileName, result, Encoding.UTF8);
+                return result;
             }
             catch (Exception ex)
             {
@@ -62,7 +65,9 @@ namespace HomeWork9_2
         private void Parse(string html)
         {
             var strRef = @"(href|HREF)[]*=[]*[""'][^""'#>]+(jsp|html|aspx)[""']";
+
             var matches = new Regex(strRef).Matches(html);
+
             foreach (Match match in matches)
             {
                 strRef = match.Value.Substring(match.Value.IndexOf('=') + 1)
