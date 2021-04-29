@@ -14,12 +14,19 @@ namespace HomeWork5_1
 
         public int ItemId { get; set; }
        
+        public int OrderDetailsId { get; set; }
+        
         //商品的描述信息，包括价格，名称 和对应的商品类型（代表一类商品）
-        public ItemDescription Description { get; set; }
-        public Item(int itemId, ItemDescription description)
+        public string Description { get; set; }
+        
+        public double Price { get; set; }
+
+        public Item(int itemId, int orderDetailsId, string description, double price)
         {
             ItemId = itemId;
+            OrderDetailsId = orderDetailsId;
             Description = description;
+            Price = price;
         }
 
         private bool Equals(Item other)
@@ -31,8 +38,7 @@ namespace HomeWork5_1
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != this.GetType()) return false;
-            return Equals((Item) obj);
+            return obj.GetType() == this.GetType() && Equals((Item) obj);
         }
 
         public override int GetHashCode()

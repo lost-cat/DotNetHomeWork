@@ -4,16 +4,18 @@
 	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=PrivateInstanceFields/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll" /&gt;&#xD;
-  &lt;Assembly Path="C:\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll" /&gt;&#xD;
-  &lt;Assembly Path="C:\Users\white\RiderProjects\DotNetHomeWork\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Xml.dll" /&gt;&#xD;
-  &lt;Assembly Path="C:\Users\white\RiderProjects\DotNetHomeWork\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll" /&gt;&#xD;
-  &lt;Assembly Path="C:\Users\white\RiderProjects\DotNetHomeWork\packages\SqlSugar.5.0.2.8\lib\SqlSugar.dll" /&gt;&#xD;
+  &lt;Assembly Path="D:\repos\lost-cat\DotNetHomeWork\packages\MySql.Data.8.0.24\lib\net452\MySql.Data.dll" /&gt;&#xD;
+  &lt;Assembly Path="D:\repos\lost-cat\DotNetHomeWork\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll" /&gt;&#xD;
+  &lt;Assembly Path="D:\repos\lost-cat\DotNetHomeWork\packages\MySql.Data.EntityFramework.8.0.24\lib\net452\MySql.Data.EntityFramework.dll" /&gt;&#xD;
+  &lt;Assembly Path="D:\repos\lost-cat\DotNetHomeWork\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
 	<s:Boolean x:Key="/Default/Environment/Hierarchy/EntityFrameworkOptions/IsAlreadyNotifiedAboutEntityFramework/@EntryValue">True</s:Boolean>
 	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f2bf8303_002D021c_002D4549_002D96ab_002D3d04b4f123ec/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;UnitTest&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="C:\Users\white\RiderProjects\DotNetHomeWork\HomeWork6\UnitTest" Presentation="&amp;lt;UnitTest&amp;gt;" /&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4954633F-515C-4063-AF61-04C4F7984A86::.NETFramework,Version=v4.7.2::orderTest.Tests.Test&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=HomeWork7_005F1_002FForm1/@EntryIndexedValue">False</s:Boolean>

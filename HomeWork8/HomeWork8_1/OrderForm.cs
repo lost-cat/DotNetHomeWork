@@ -7,7 +7,7 @@ namespace HomeWork8_1
 {
     public partial class OrderForm : Form
     {
-        private List<OrderDetails> details;
+        private readonly List<OrderDetails> details;
         private readonly OrderService orderService;
 
         public OrderForm(OrderService o)
@@ -29,10 +29,10 @@ namespace HomeWork8_1
         private void ButtonSubmit_Click(object sender, EventArgs e)
         {
             
-            var customer = new Customer(TextBoxCustomerName.Text, textBoxAddress.Text);
+            var customer = new Customer(001,TextBoxCustomerName.Text, textBoxAddress.Text);
             Order order = new Order(new System.Collections.Generic.List<OrderDetails>(details),
                 orderService.MaxId + 1,
-                DateTime.Now, customer);
+                DateTime.Now, customer.CustomerId);
             orderService.AddOrder(order);
             Close();
         }

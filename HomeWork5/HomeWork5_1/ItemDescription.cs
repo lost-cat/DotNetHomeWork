@@ -14,9 +14,9 @@ namespace HomeWork5_1
         //商品的价格
         public int Price { get; set; }
         //商品的名称
-        public String Name { get; set; }
+        public string Name { get; set; }
 
-        public ItemDescription(int itemType, int price, String name)
+        public ItemDescription(int itemType, int price, string name)
         {
             ItemType = itemType;
             Price = price;

@@ -17,20 +17,20 @@ namespace HomeWork5_1
         public List<OrderDetails> DetailsList { get; set; }
 
         //该订单对应的用户
-        public Customer Customer { get; set; }
+        public int CustomerId { get; set; }
 
-        public int TotalMoney => DetailsList.Sum(details => details.OrderDetailPrice);
+        public double TotalMoney => DetailsList.Sum(details => details.OrderDetailPrice);
 
         public Order(
             List<OrderDetails> detailsList,
             int orderId,
             DateTime orderTIme,
-            Customer customer)
+            int customerId)
         {
             DetailsList = detailsList;
             OrderId = orderId;
             OrderTIme = orderTIme;
-            Customer = customer;
+            CustomerId = customerId;
         }
 
         private bool Equals(Order other)
@@ -47,15 +47,9 @@ namespace HomeWork5_1
 
         public override int GetHashCode()
         {
-            unchecked
-            {
-                var hashCode = OrderId;
-                hashCode = (hashCode * 397) ^ OrderTIme.GetHashCode();
-                hashCode = (hashCode * 397) ^ (DetailsList != null ? DetailsList.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (Customer != null ? Customer.GetHashCode() : 0);
-                return hashCode;
-            }
+            return OrderId;
         }
+
 
         public Order()
         {
@@ -67,7 +61,7 @@ namespace HomeWork5_1
         {
             return
                 $"{nameof(OrderId)}: {OrderId}," +
-                $" {nameof(OrderTIme)}: {OrderTIme}, {nameof(DetailsList)}: {DetailsList}, {nameof(Customer)}: {Customer}, {nameof(TotalMoney)}: {TotalMoney}";
+                $" {nameof(OrderTIme)}: {OrderTIme}, {nameof(DetailsList)}: {DetailsList}, {nameof(CustomerId)}: {CustomerId}, {nameof(TotalMoney)}: {TotalMoney}";
         }
     }
 }

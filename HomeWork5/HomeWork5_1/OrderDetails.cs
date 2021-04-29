@@ -5,14 +5,19 @@ namespace HomeWork5_1
     [Serializable]
     public class OrderDetails
     {
+        public int OrderDetailsId { get;set; }
+        
+        public int OrderId { get; set; }
+        
         //对应的商品
+        
         public Item Item { get; set; }
 
         //该商品的数量
         public int ItemCounts { get; set; }
 
         //该订单明细的总价格（未打折扣前）
-        public int OrderDetailPrice => Item.Description.Price * ItemCounts;
+        public double OrderDetailPrice => Item.Price * ItemCounts;
 
         //代表该订单明细的折扣
         public double DisCount { get; set; }

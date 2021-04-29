@@ -35,7 +35,7 @@ namespace HomeWork8_1
                         new[] {orderDetailsArray[2 * i], orderDetailsArray[2 * i + 1]}),
                     i,
                     DateTime.Now,
-                    new Customer("lmk", "wuhan university")));
+                    001));
             }
 
             InitializeComponent();

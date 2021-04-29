@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using HomeWork5_1;
 using HomeWork5_1.mysql;
-using MySql.Data.MySqlClient;
 using NUnit.Framework;
 
 namespace orderTest
@@ -15,16 +13,16 @@ namespace orderTest
         [OneTimeSetUp]
         public void Init()
         {
-            var orderDetailsArray = new OrderDetails[10];
-            for (var i = 0; i < orderDetailsArray.Length; i++)
-            {
-                orderDetailsArray[i] = new OrderDetails(
-                    ItemFactory.GetItem(random.Next(3)),
-                    random.Next(1, 10));
-            }
-
-
+      
          
+        }
+
+        [Test]
+        public void Test()
+        {
+            OrderContext db = new OrderContext();
+            db.Customers.Add(new Customer(001, "white", "武汉大学"));
+            db.SaveChanges();
         }
 
 

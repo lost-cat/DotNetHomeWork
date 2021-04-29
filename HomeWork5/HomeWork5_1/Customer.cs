@@ -9,11 +9,13 @@ namespace HomeWork5_1
         {
         }
 
+        public int CustomerId { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
 
-        public Customer(string name, string address)
+        public Customer(int customerId,string name, string address)
         {
+            CustomerId = customerId;
             Name = name;
             Address = address;
         }

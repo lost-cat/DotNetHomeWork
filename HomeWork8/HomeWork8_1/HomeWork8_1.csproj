@@ -63,14 +63,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="orderdbDataSet.cs">
-      <DependentUpon>orderdbDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="orderdbDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>orderdbDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,17 +86,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="orderdbDataSet.xsc">
-      <DependentUpon>orderdbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="orderdbDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>orderdbDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="orderdbDataSet.xss">
-      <DependentUpon>orderdbDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\DataSources\HomeWork5_1.Customer.datasource" />
     <None Include="Properties\DataSources\HomeWork5_1.Item.datasource" />
     <None Include="Properties\DataSources\HomeWork5_1.ItemDescription.datasource" />
