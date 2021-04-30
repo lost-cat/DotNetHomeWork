@@ -89,7 +89,7 @@ namespace HomeWork5_1
         /// </summary>
         /// <param name="itemDescription"></param>
         /// <returns></returns>
-        public  List<Order> QueryOrderByItemName(ItemDescription itemDescription)
+        public  List<Order> QueryOrderByItemName(string itemDescription)
         {
             var orders = _orders
                 .Where(order => order.DetailsList

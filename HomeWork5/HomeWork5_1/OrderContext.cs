@@ -1,6 +1,6 @@
 using System.Data.Entity;
 
-namespace HomeWork5_1.mysql
+namespace HomeWork5_1
 {
     public class OrderContext : DbContext
     {
