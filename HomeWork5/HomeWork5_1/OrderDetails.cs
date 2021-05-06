@@ -1,17 +1,23 @@
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HomeWork5_1
 {
     [Serializable]
     public class OrderDetails
     {
-        public int OrderDetailsId { get;set; }
-        
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int OrderDetailsId { get; set; }
+
         public int OrderId { get; set; }
-        
+
+        [ForeignKey("OrderId")] public Order Order { get; set; }
+
         //对应的商品
-        
-        public Item Item { get; set; }
+        public int ItemId { get; set; }
+        [ForeignKey("ItemId")] public Item Item { get; set; }
 
         //该商品的数量
         public int ItemCounts { get; set; }
@@ -59,7 +65,8 @@ namespace HomeWork5_1
 
         public override string ToString()
         {
-            return $"{nameof(Item)}: {Item}, {nameof(ItemCounts)}: {ItemCounts}, {nameof(OrderDetailPrice)}: {OrderDetailPrice}, {nameof(DisCount)}: {DisCount}";
+            return
+                $"{nameof(Item)}: {Item}, {nameof(ItemCounts)}: {ItemCounts}, {nameof(OrderDetailPrice)}: {OrderDetailPrice}, {nameof(DisCount)}: {DisCount}";
         }
     }
 }

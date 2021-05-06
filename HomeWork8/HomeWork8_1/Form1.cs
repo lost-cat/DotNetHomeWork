@@ -7,7 +7,6 @@ namespace HomeWork8_1
 {
     public partial class Form1 : Form
     {
-       
         private readonly OrderService service = new OrderService();
 
         public Form1()
@@ -28,20 +27,12 @@ namespace HomeWork8_1
             }
 
 
-            for (var i = 0; i < 5; i++)
-            {
-                service.AddOrder(new Order(
-                    new List<OrderDetails>(
-                        new[] {orderDetailsArray[2 * i], orderDetailsArray[2 * i + 1]}),
-                    i,
-                    DateTime.Now,
-                    001));
-            }
+           
+       
 
             InitializeComponent();
 
-            orderBindingSource.DataSource = service._orders.ToArray();
-
+            orderBindingSource.DataSource = service.Orders;
             DetailsView.Enabled = false;
         }
 
@@ -75,7 +66,7 @@ namespace HomeWork8_1
                 return;
             }
 
-            if (e.RowIndex > service._orders.Count)
+            if (e.RowIndex > service.Orders.Count)
             {
                 return;
             }
@@ -95,7 +86,7 @@ namespace HomeWork8_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            orderBindingSource.DataSource = service._orders.ToArray();
+            orderBindingSource.DataSource = service.Orders.ToArray();
         }
 
         private void QueryOrder_Click(object sender, EventArgs e)
@@ -104,7 +95,6 @@ namespace HomeWork8_1
             {
                 return;
             }
-            
         }
     }
 }

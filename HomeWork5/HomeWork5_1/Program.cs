@@ -9,10 +9,12 @@ namespace HomeWork5_1
         {
             using (var db = new OrderContext())
             {
-                db.Customers.Add(new Customer(001,"white", "武汉大学"));
+                db.Customers.Add(new Customer("white", "武汉大学"));
                 var changes = db.SaveChanges();
                 Console.WriteLine(changes);
             }
+
+            Console.WriteLine("添加成功");
         }
     }
 }

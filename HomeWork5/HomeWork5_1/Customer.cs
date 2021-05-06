@@ -1,4 +1,6 @@
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HomeWork5_1
 {
@@ -8,14 +10,15 @@ namespace HomeWork5_1
         public Customer()
         {
         }
-
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CustomerId { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
 
-        public Customer(int customerId,string name, string address)
+        public Customer(string name, string address)
         {
-            CustomerId = customerId;
+            
             Name = name;
             Address = address;
         }

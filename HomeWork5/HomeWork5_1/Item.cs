@@ -1,4 +1,6 @@
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HomeWork5_1
 {
@@ -12,19 +14,17 @@ namespace HomeWork5_1
         {
         }
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ItemId { get; set; }
-       
-        public int OrderDetailsId { get; set; }
-        
+
         //商品的描述信息，包括价格，名称 和对应的商品类型（代表一类商品）
         public string Description { get; set; }
-        
+
         public double Price { get; set; }
 
-        public Item(int itemId, int orderDetailsId, string description, double price)
+        public Item(string description, double price)
         {
-            ItemId = itemId;
-            OrderDetailsId = orderDetailsId;
             Description = description;
             Price = price;
         }

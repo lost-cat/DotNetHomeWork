@@ -54,7 +54,6 @@
     <ItemGroup>
         <Compile Include="Customer.cs" />
         <Compile Include="Item.cs" />
-        <Compile Include="ItemDescription.cs" />
         <Compile Include="ItemFactory.cs" />
         <Compile Include="mysql\MySQLUtil.cs" />
         <Compile Include="Order.cs" />
@@ -76,7 +75,7 @@
       <PackageReference Include="K4os.Hash.xxHash" Version="1.0.6" />
       <PackageReference Include="mysql-connector-net" Version="1.0.0" />
       <PackageReference Include="MySql.Data" Version="8.0.24" />
-      <PackageReference Include="MySql.Data.EntityFramework" Version="8.0.24" />
+      <PackageReference Include="MySql.Data.EntityFramework" Version="8.0.22" />
       <PackageReference Include="System.Buffers" Version="4.5.1" />
       <PackageReference Include="System.Memory" Version="4.5.4" />
       <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
