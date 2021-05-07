@@ -30,8 +30,7 @@ namespace HomeWork8_1
         {
             
             var customer = new Customer(TextBoxCustomerName.Text, textBoxAddress.Text);
-            Order order = new Order(new System.Collections.Generic.List<OrderDetails>(details),
-                
+            var order = new Order(new List<OrderDetails>(details),
                 DateTime.Now,customer);
             orderService.AddOrder(order);
             Close();

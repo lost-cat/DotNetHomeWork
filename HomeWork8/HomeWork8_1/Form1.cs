@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using HomeWork5_1;
 
@@ -7,32 +8,13 @@ namespace HomeWork8_1
 {
     public partial class Form1 : Form
     {
-        private readonly OrderService service = new OrderService();
+        private  OrderService Service { get; set; } 
 
         public Form1()
         {
-            var random = new Random();
-            var items = new Item[10];
-            for (var index = 0; index < items.Length; index++)
-            {
-                items[index] = ItemFactory.GetItem(random.Next(3));
-            }
-
-            var orderDetailsArray = new OrderDetails[10];
-            for (var i = 0; i < orderDetailsArray.Length; i++)
-            {
-                orderDetailsArray[i] = new OrderDetails(
-                    ItemFactory.GetItem(random.Next(3)),
-                    random.Next(1, 10));
-            }
-
-
-           
-       
-
             InitializeComponent();
-
-            orderBindingSource.DataSource = service.Orders;
+            Service = new OrderService();
+            orderBindingSource.DataSource = Service.Orders;
             DetailsView.Enabled = false;
         }
 
@@ -51,7 +33,7 @@ namespace HomeWork8_1
 
         private void CreateOrder_Click(object sender, EventArgs e)
         {
-            var orderForm = new OrderForm(service);
+            var orderForm = new OrderForm(Service);
             orderForm.ShowDialog();
         }
 
@@ -66,7 +48,7 @@ namespace HomeWork8_1
                 return;
             }
 
-            if (e.RowIndex > service.Orders.Count)
+            if (e.RowIndex > Service.Orders.Count)
             {
                 return;
             }
@@ -75,7 +57,7 @@ namespace HomeWork8_1
             var cell = gridView[0, e.RowIndex];
             var id = (int) cell.Value;
             Console.WriteLine(id);
-            var order = service.QueryOrderById(id);
+            var order = Service.QueryOrderById(id);
             DetailsView.DataSource = order;
             DetailsView.DataMember = "DetailsList";
         }
@@ -86,7 +68,7 @@ namespace HomeWork8_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            orderBindingSource.DataSource = service.Orders.ToArray();
+            orderBindingSource.DataSource = Service.Orders.ToArray();
         }
 
         private void QueryOrder_Click(object sender, EventArgs e)

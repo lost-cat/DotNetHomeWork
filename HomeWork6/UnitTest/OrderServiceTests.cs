@@ -20,8 +20,8 @@ namespace orderTest
         [Test]
         public void Test()
         {
-            OrderContext db = new OrderContext();
-            db.Customers.Add(new Customer(001, "white", "武汉大学"));
+            var db = new OrderContext();
+            db.Customers.Add(new Customer( "white", "武汉大学"));
             db.SaveChanges();
         }
 

@@ -1,25 +1,30 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 
 namespace HomeWork5_1
 {
     public class OrderService
     {
-        private readonly OrderContext context = new OrderContext();
+        private readonly OrderContext db = new OrderContext();
+        
+        public ObservableCollection<Order> Orders => db.Orders.Local;
 
 
         public void AddOrder(Order order)
         {
             if (order == null)
             {
-                throw new NullReferenceException("该订单为空!");
+                throw new NullReferenceException("订单非法!");
             }
-
-            if (context.Orders.Contains(order))
+            if (db.Orders.Contains(order))
                 throw new Exception("该订单已存在，请不要重复添加!");
 
-            context.Orders.Add(order);
+            db.Orders.Add(order);
+            db.SaveChanges();
         }
 
 
@@ -29,12 +34,11 @@ namespace HomeWork5_1
         /// <param name="predicate">通过给定条件匹配对应的order</param>
         public void DeleteOrder(Predicate<Order> predicate)
         {
-            var enumerable = context.Orders.Where(o => predicate(o));
-            var orders = enumerable.ToArray();
-
-            foreach (var t in orders)
+            var order = db.Orders.FirstOrDefault(o => predicate(o));
+            if (order != null)
             {
-                context.Orders.Remove(t);
+                db.Orders.Remove(order);
+                db.SaveChanges();
             }
         }
 
@@ -45,7 +49,7 @@ namespace HomeWork5_1
         /// <param name="action">对筛选后的order执行的操作</param>
         public void ModifyOrder(Predicate<Order> predicate, Action<Order> action)
         {
-            foreach (var order in context.Orders.Where(order => predicate(order)))
+            foreach (var order in db.Orders.Where(order => predicate(order)))
             {
                 action(order);
                 return;
@@ -62,7 +66,7 @@ namespace HomeWork5_1
         /// <exception cref="Exception"></exception>
         public Order QueryOrderById(int orderId)
         {
-            var order = context.Orders.Find(orderId);
+            var order = db.Orders.Find(orderId);
             if (order == null) throw new Exception("该订单不存在");
 
             return order;
@@ -75,7 +79,7 @@ namespace HomeWork5_1
         /// <returns></returns>
         public List<Order> QueryOrder(Predicate<Order> predicate)
         {
-            var orders = context.Orders.Where(o => predicate(o));
+            var orders = db.Orders.Where(o => predicate(o));
             return orders.OrderBy(o => o.TotalMoney).ToList();
         }
 
@@ -86,7 +90,7 @@ namespace HomeWork5_1
         /// <returns></returns>
         public List<Order> QueryOrderByItemName(string itemDescription)
         {
-            var orders = context.Orders
+            var orders = db.Orders
                 .Where(order => order.DetailsList
                     .Any(details => details.Item.Description.Equals(itemDescription)))
                 .ToList();
@@ -109,8 +113,6 @@ namespace HomeWork5_1
             order.DetailsList.Add(orderDetails);
         }
 
-
-        public List<Order> Orders => context.Orders.ToList();
 
         /*
         /// <summary>

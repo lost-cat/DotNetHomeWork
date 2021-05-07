@@ -7,7 +7,7 @@ namespace HomeWork5_1
     [Serializable]
     public class Item
     {
-        //带表每个货物自己的编号，独一无二
+      
 
 
         public Item()

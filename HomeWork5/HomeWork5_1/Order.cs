@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace HomeWork5_1
 {
-    [Serializable]
+   
     public class Order
     {
         //该订单的id
@@ -26,6 +26,7 @@ namespace HomeWork5_1
         [ForeignKey("CustomerId")]
         public Customer Customer { get; set; }
 
+        
         public double TotalMoney => DetailsList.Sum(details => details.OrderDetailPrice);
 
         public Order(
@@ -63,7 +64,11 @@ namespace HomeWork5_1
             Customer = customer;
         }
 
-  
+        public Order()
+        {
+            
+        }
+
 
         public override string ToString()
         {
