@@ -2,6 +2,8 @@ using HomeWork5_1;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using HomeWork5_1.entities;
+using HomeWork5_1.services;
 
 namespace HomeWork8_1
 {

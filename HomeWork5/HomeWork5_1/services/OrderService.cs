@@ -1,17 +1,29 @@
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Data.Entity;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
+using System.Threading.Tasks;
+using HomeWork5_1.data;
+using HomeWork5_1.entities;
 
-namespace HomeWork5_1
+namespace HomeWork5_1.services
 {
     public class OrderService
     {
         private readonly OrderContext db = new OrderContext();
-        
-        public ObservableCollection<Order> Orders => db.Orders.Local;
+
+        public async Task<List<Order>> GetOrders()
+        {
+            var task = Task.Run(  () => 
+            {
+                 
+                db.Orders.Include(o => o.DetailsList).Include(o => o.Customer)
+                    .Include(o => o.DetailsList.Select(d => d.Item)).Load();
+                
+            });
+            await task;
+            return db.Orders.ToList();
+        }
 
 
         public void AddOrder(Order order)
@@ -20,6 +32,7 @@ namespace HomeWork5_1
             {
                 throw new NullReferenceException("订单非法!");
             }
+
             if (db.Orders.Contains(order))
                 throw new Exception("该订单已存在，请不要重复添加!");
 

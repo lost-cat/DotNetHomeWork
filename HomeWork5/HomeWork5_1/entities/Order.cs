@@ -4,12 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 
-namespace HomeWork5_1
+namespace HomeWork5_1.entities
 {
    
     public class Order
     {
-        //该订单的id
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int OrderId { get; set; }
@@ -18,16 +17,25 @@ namespace HomeWork5_1
         public DateTime OrderTIme { get; set; }
 
         //具体的订单明细表 
+        [Required]
         public List<OrderDetails> DetailsList { get; set; }
 
         //该订单对应的用户
         
         public int CustomerId { get; set; }
         [ForeignKey("CustomerId")]
+        [Required]
         public Customer Customer { get; set; }
 
         
-        public double TotalMoney => DetailsList.Sum(details => details.OrderDetailPrice);
+        public double TotalMoney
+        {
+            get
+            {
+                if (DetailsList != null) return (DetailsList.Sum(details => details.OrderDetailPrice));
+                return 0;
+            }
+        }
 
         public Order(
             List<OrderDetails> detailsList,

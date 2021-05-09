@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace HomeWork5_1
+namespace HomeWork5_1.entities
 {
     [Serializable]
     public class OrderDetails
@@ -17,6 +17,7 @@ namespace HomeWork5_1
 
         //对应的商品
         public int ItemId { get; set; }
+        [Required]
         [ForeignKey("ItemId")] public Item Item { get; set; }
 
         //该商品的数量

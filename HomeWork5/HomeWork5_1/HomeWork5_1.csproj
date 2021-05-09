@@ -52,16 +52,17 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Customer.cs" />
-        <Compile Include="Item.cs" />
+        <Compile Include="data\OrderContext.cs" />
+        <Compile Include="entities\Customer.cs" />
+        <Compile Include="entities\Item.cs" />
+        <Compile Include="entities\Order.cs" />
+        <Compile Include="entities\OrderDetails.cs" />
         <Compile Include="ItemFactory.cs" />
+        <Compile Include="Migrations\Configuration.cs" />
         <Compile Include="mysql\MySQLUtil.cs" />
-        <Compile Include="Order.cs" />
-        <Compile Include="OrderContext.cs" />
-        <Compile Include="OrderDetails.cs" />
-        <Compile Include="OrderService.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="services\OrderService.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="App.config" />

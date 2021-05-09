@@ -1,4 +1,6 @@
 ﻿
+using HomeWork5_1.entities;
+
 namespace HomeWork8_1
 {
     partial class Form1
@@ -104,7 +106,7 @@ namespace HomeWork8_1
             // 
             // orderBindingSource
             // 
-            this.orderBindingSource.DataSource = typeof(HomeWork5_1.Order);
+            this.orderBindingSource.DataSource = typeof(Order);
             this.orderBindingSource.CurrentChanged += new System.EventHandler(this.orderBindingSource_CurrentChanged);
             // 
             // flowLayoutPanel1

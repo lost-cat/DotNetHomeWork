@@ -1,18 +1,14 @@
 using System.Data.Entity;
-using System.Linq;
+using HomeWork5_1.entities;
 
-namespace HomeWork5_1
+namespace HomeWork5_1.data
 {
+  
     public class OrderContext : DbContext
     {
         public OrderContext() : base("orderDb")
         {
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<OrderContext>());
-            
-            Orders.Include(o => o.DetailsList)
-                .Include(o=>o.Customer)
-                .Include(o => o.DetailsList.Select(d => d.Item))
-                .Load();
         }
 
         public DbSet<Order> Orders { get; set; }

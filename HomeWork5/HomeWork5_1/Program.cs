@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data.Entity;
 using System.Linq;
+using HomeWork5_1.data;
+using HomeWork5_1.entities;
 using HomeWork5_1.mysql;
+using HomeWork5_1.services;
 
 namespace HomeWork5_1
 {
@@ -11,14 +14,15 @@ namespace HomeWork5_1
     {
         public static void Main(string[] args)
         {
-            using (var db = new OrderContext())
+            var service = new OrderService();
+            var list = service.GetOrders().Result;
+            foreach (var order in list)
             {
-              
-                ObservableCollection<Order> Orders= db.Orders.Local;
-                // var customer = db.Customers.Find(1);
-                // var order = db.Orders.Include(o => o.DetailsList).Include(o => o.DetailsList.Select(d => d.Item))
-                //     .FirstOrDefault(o => o.OrderId == 2);
-                // Console.WriteLine(order);
+                Console.WriteLine(order.TotalMoney);
+                
+            }
+
+            // Console.WriteLine(order);
                 // var observableCollection = db.Customers.Local;
                 // if (order != null)
                 //     foreach (var orderDetails in order.DetailsList)
@@ -28,7 +32,8 @@ namespace HomeWork5_1
                 //
                 // var item = db.Items.Add(ItemFactory.GetItem(2));
                 // var item1 = db.Items.Add(ItemFactory.GetItem(1));
-                //
+                // var customer = new Customer("white", "武汉大学");
+                // customer = db.Customers.Add(customer);
                 // var orderDetails = new OrderDetails(item, 10);
                 // var orderDetails1 = new OrderDetails(item1, 3);
                 // orderDetails = db.Details.Add(orderDetails);
@@ -37,9 +42,9 @@ namespace HomeWork5_1
                 // var order = new Order(detailsList, DateTime.Now, customer);
                 // db.Orders.Add(order);
                 // db.SaveChanges();
-            }
+            
 
-            Console.WriteLine("添加成功");
+            
         }
     }
 }

@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using HomeWork5_1;
+using HomeWork5_1.entities;
+using HomeWork5_1.services;
 
 namespace HomeWork8_1
 {
     public partial class Form1 : Form
     {
-        private  OrderService Service { get; set; } 
-
+        private  OrderService Service { get; set; }
+        private readonly List<Order> orders;
         public Form1()
         {
             InitializeComponent();
             Service = new OrderService();
-            orderBindingSource.DataSource = Service.Orders;
+            orders = Service.GetOrders().Result;
+            orderBindingSource.DataSource = orders;
             DetailsView.Enabled = false;
         }
 
@@ -48,7 +51,7 @@ namespace HomeWork8_1
                 return;
             }
 
-            if (e.RowIndex > Service.Orders.Count)
+            if (e.RowIndex > orders.Count)
             {
                 return;
             }
@@ -68,7 +71,7 @@ namespace HomeWork8_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            orderBindingSource.DataSource = Service.Orders.ToArray();
+            orderBindingSource.DataSource = orders.ToArray();
         }
 
         private void QueryOrder_Click(object sender, EventArgs e)

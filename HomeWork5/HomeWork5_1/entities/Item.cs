@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace HomeWork5_1
+namespace HomeWork5_1.entities
 {
     [Serializable]
     public class Item

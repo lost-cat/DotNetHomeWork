@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using HomeWork5_1.entities;
 
 namespace HomeWork8_1
 {
@@ -187,7 +188,7 @@ namespace HomeWork8_1
             // 
             // orderDetailsBindingSource
             // 
-            this.orderDetailsBindingSource.DataSource = typeof(HomeWork5_1.OrderDetails);
+            this.orderDetailsBindingSource.DataSource = typeof(OrderDetails);
             // 
             // itemDataGridViewTextBoxColumn
             // 
