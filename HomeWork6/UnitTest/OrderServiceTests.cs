@@ -1,8 +1,7 @@
 ﻿using System;
-using HomeWork5_1;
 using HomeWork5_1.data;
 using HomeWork5_1.entities;
-using HomeWork5_1.mysql;
+
 using NUnit.Framework;
 
 namespace orderTest

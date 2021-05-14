@@ -55,11 +55,11 @@ namespace HomeWork9_2
             try
             {
                 var webClient = new WebClient {Encoding = Encoding.UTF8};
-                var task = webClient.DownloadStringTaskAsync(url);
+                var str = await webClient.DownloadStringTaskAsync(url);
                 var fileName = count.ToString();
-                var result = await task;
-                File.WriteAllText(fileName, result, Encoding.UTF8);
-                return result;
+                
+                File.WriteAllText(fileName, str, Encoding.UTF8);
+                return str;
             }
             catch (Exception ex)
             {

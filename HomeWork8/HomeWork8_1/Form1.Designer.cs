@@ -48,10 +48,10 @@ namespace HomeWork8_1
             this.flush = new System.Windows.Forms.Button();
             this.textBoxSearchContent = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.OrderView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.OrderView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.orderBindingSource)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DetailsView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.DetailsView)).BeginInit();
             this.SuspendLayout();
             // 
             // OrderView
@@ -60,17 +60,14 @@ namespace HomeWork8_1
             this.OrderView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.OrderView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.OrderView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OrderView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.orderIdDataGridViewTextBoxColumn,
-            this.orderTImeDataGridViewTextBoxColumn,
-            this.customerDataGridViewTextBoxColumn,
-            this.totalMoneyDataGridViewTextBoxColumn});
+            this.OrderView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.orderIdDataGridViewTextBoxColumn, this.orderTImeDataGridViewTextBoxColumn, this.customerDataGridViewTextBoxColumn, this.totalMoneyDataGridViewTextBoxColumn});
             this.OrderView.DataSource = this.orderBindingSource;
-            this.OrderView.Location = new System.Drawing.Point(12, 99);
+            this.OrderView.Location = new System.Drawing.Point(14, 119);
+            this.OrderView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderView.Name = "OrderView";
             this.OrderView.RowHeadersWidth = 51;
             this.OrderView.RowTemplate.Height = 27;
-            this.OrderView.Size = new System.Drawing.Size(861, 191);
+            this.OrderView.Size = new System.Drawing.Size(969, 229);
             this.OrderView.TabIndex = 0;
             this.OrderView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.OrderView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OrderView_CellDoubleClick);
@@ -106,7 +103,7 @@ namespace HomeWork8_1
             // 
             // orderBindingSource
             // 
-            this.orderBindingSource.DataSource = typeof(Order);
+            this.orderBindingSource.DataSource = typeof(HomeWork5_1.entities.Order);
             this.orderBindingSource.CurrentChanged += new System.EventHandler(this.orderBindingSource_CurrentChanged);
             // 
             // flowLayoutPanel1
@@ -115,19 +112,20 @@ namespace HomeWork8_1
             this.flowLayoutPanel1.Controls.Add(this.UpdateOrder);
             this.flowLayoutPanel1.Controls.Add(this.DeleteOrder);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(908, 99);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1022, 119);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(140, 423);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(158, 508);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // CreateOrder
             // 
             this.CreateOrder.AutoSize = true;
-            this.CreateOrder.Font = new System.Drawing.Font("华光综艺_CNKI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.CreateOrder.Location = new System.Drawing.Point(3, 50);
-            this.CreateOrder.Margin = new System.Windows.Forms.Padding(3, 50, 3, 3);
+            this.CreateOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (134)));
+            this.CreateOrder.Location = new System.Drawing.Point(3, 60);
+            this.CreateOrder.Margin = new System.Windows.Forms.Padding(3, 60, 3, 4);
             this.CreateOrder.Name = "CreateOrder";
-            this.CreateOrder.Size = new System.Drawing.Size(137, 42);
+            this.CreateOrder.Size = new System.Drawing.Size(179, 58);
             this.CreateOrder.TabIndex = 0;
             this.CreateOrder.Text = "新建订单";
             this.CreateOrder.UseVisualStyleBackColor = true;
@@ -136,11 +134,11 @@ namespace HomeWork8_1
             // UpdateOrder
             // 
             this.UpdateOrder.AutoSize = true;
-            this.UpdateOrder.Font = new System.Drawing.Font("华光综艺_CNKI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.UpdateOrder.Location = new System.Drawing.Point(3, 145);
-            this.UpdateOrder.Margin = new System.Windows.Forms.Padding(3, 50, 3, 3);
+            this.UpdateOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (134)));
+            this.UpdateOrder.Location = new System.Drawing.Point(3, 182);
+            this.UpdateOrder.Margin = new System.Windows.Forms.Padding(3, 60, 3, 4);
             this.UpdateOrder.Name = "UpdateOrder";
-            this.UpdateOrder.Size = new System.Drawing.Size(137, 42);
+            this.UpdateOrder.Size = new System.Drawing.Size(179, 58);
             this.UpdateOrder.TabIndex = 2;
             this.UpdateOrder.Text = "修改订单";
             this.UpdateOrder.UseVisualStyleBackColor = true;
@@ -148,11 +146,11 @@ namespace HomeWork8_1
             // DeleteOrder
             // 
             this.DeleteOrder.AutoSize = true;
-            this.DeleteOrder.Font = new System.Drawing.Font("华光综艺_CNKI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.DeleteOrder.Location = new System.Drawing.Point(3, 240);
-            this.DeleteOrder.Margin = new System.Windows.Forms.Padding(3, 50, 3, 3);
+            this.DeleteOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (134)));
+            this.DeleteOrder.Location = new System.Drawing.Point(3, 304);
+            this.DeleteOrder.Margin = new System.Windows.Forms.Padding(3, 60, 3, 4);
             this.DeleteOrder.Name = "DeleteOrder";
-            this.DeleteOrder.Size = new System.Drawing.Size(137, 42);
+            this.DeleteOrder.Size = new System.Drawing.Size(179, 58);
             this.DeleteOrder.TabIndex = 3;
             this.DeleteOrder.Text = "删除订单";
             this.DeleteOrder.UseVisualStyleBackColor = true;
@@ -160,11 +158,11 @@ namespace HomeWork8_1
             // QueryOrder
             // 
             this.QueryOrder.AutoSize = true;
-            this.QueryOrder.Font = new System.Drawing.Font("华光综艺_CNKI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.QueryOrder.Location = new System.Drawing.Point(720, 36);
-            this.QueryOrder.Margin = new System.Windows.Forms.Padding(3, 50, 3, 3);
+            this.QueryOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (134)));
+            this.QueryOrder.Location = new System.Drawing.Point(810, 43);
+            this.QueryOrder.Margin = new System.Windows.Forms.Padding(3, 60, 3, 4);
             this.QueryOrder.Name = "QueryOrder";
-            this.QueryOrder.Size = new System.Drawing.Size(137, 42);
+            this.QueryOrder.Size = new System.Drawing.Size(154, 50);
             this.QueryOrder.TabIndex = 1;
             this.QueryOrder.Text = "查询";
             this.QueryOrder.UseVisualStyleBackColor = true;
@@ -173,10 +171,10 @@ namespace HomeWork8_1
             // Notice
             // 
             this.Notice.AutoSize = true;
-            this.Notice.Font = new System.Drawing.Font("宋体", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Notice.Location = new System.Drawing.Point(12, 442);
+            this.Notice.Font = new System.Drawing.Font("宋体", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (134)));
+            this.Notice.Location = new System.Drawing.Point(14, 530);
             this.Notice.Name = "Notice";
-            this.Notice.Size = new System.Drawing.Size(0, 43);
+            this.Notice.Size = new System.Drawing.Size(0, 52);
             this.Notice.TabIndex = 2;
             // 
             // DetailsView
@@ -184,22 +182,23 @@ namespace HomeWork8_1
             this.DetailsView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DetailsView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.DetailsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DetailsView.Location = new System.Drawing.Point(12, 308);
+            this.DetailsView.Location = new System.Drawing.Point(14, 370);
+            this.DetailsView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DetailsView.Name = "DetailsView";
             this.DetailsView.RowHeadersWidth = 51;
             this.DetailsView.RowTemplate.Height = 27;
-            this.DetailsView.Size = new System.Drawing.Size(861, 230);
+            this.DetailsView.Size = new System.Drawing.Size(969, 276);
             this.DetailsView.TabIndex = 3;
             this.DetailsView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DetailsView_CellContentClick);
             // 
             // flush
             // 
             this.flush.AutoSize = true;
-            this.flush.Font = new System.Drawing.Font("华光综艺_CNKI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.flush.Location = new System.Drawing.Point(911, 559);
-            this.flush.Margin = new System.Windows.Forms.Padding(3, 50, 3, 3);
+            this.flush.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (134)));
+            this.flush.Location = new System.Drawing.Point(1025, 671);
+            this.flush.Margin = new System.Windows.Forms.Padding(3, 60, 3, 4);
             this.flush.Name = "flush";
-            this.flush.Size = new System.Drawing.Size(137, 42);
+            this.flush.Size = new System.Drawing.Size(154, 50);
             this.flush.TabIndex = 4;
             this.flush.Text = "刷新";
             this.flush.UseVisualStyleBackColor = true;
@@ -207,25 +206,26 @@ namespace HomeWork8_1
             // 
             // textBoxSearchContent
             // 
-            this.textBoxSearchContent.Location = new System.Drawing.Point(461, 50);
+            this.textBoxSearchContent.Location = new System.Drawing.Point(519, 60);
+            this.textBoxSearchContent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxSearchContent.Name = "textBoxSearchContent";
-            this.textBoxSearchContent.Size = new System.Drawing.Size(200, 25);
+            this.textBoxSearchContent.Size = new System.Drawing.Size(224, 28);
             this.textBoxSearchContent.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(310, 60);
+            this.label1.Location = new System.Drawing.Point(384, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.Size = new System.Drawing.Size(44, 18);
             this.label1.TabIndex = 6;
             this.label1.Text = "搜索";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1060, 674);
+            this.ClientSize = new System.Drawing.Size(1192, 809);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxSearchContent);
             this.Controls.Add(this.flush);
@@ -234,17 +234,17 @@ namespace HomeWork8_1
             this.Controls.Add(this.Notice);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.OrderView);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "订单管理系统";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.OrderView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.OrderView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.orderBindingSource)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DetailsView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.DetailsView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         private System.Windows.Forms.TextBox textBoxSearchContent;

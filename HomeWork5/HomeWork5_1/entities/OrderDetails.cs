@@ -17,7 +17,6 @@ namespace HomeWork5_1.entities
 
         //对应的商品
         public int ItemId { get; set; }
-        [Required]
         [ForeignKey("ItemId")] public Item Item { get; set; }
 
         //该商品的数量

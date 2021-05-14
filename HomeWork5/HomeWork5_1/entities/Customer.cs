@@ -32,8 +32,7 @@ namespace HomeWork5_1.entities
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != this.GetType()) return false;
-            return Equals((Customer) obj);
+            return obj.GetType() == GetType() && Equals((Customer) obj);
         }
 
         public override int GetHashCode()

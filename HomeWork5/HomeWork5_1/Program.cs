@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Data.Entity;
-using System.Linq;
-using HomeWork5_1.data;
-using HomeWork5_1.entities;
-using HomeWork5_1.mysql;
 using HomeWork5_1.services;
 
 namespace HomeWork5_1

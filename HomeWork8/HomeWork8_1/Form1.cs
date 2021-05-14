@@ -12,11 +12,11 @@ namespace HomeWork8_1
     {
         private  OrderService Service { get; set; }
         private readonly List<Order> orders;
-        public Form1()
+        public  Form1()
         {
             InitializeComponent();
             Service = new OrderService();
-            orders = Service.GetOrders().Result;
+            orders =  Service.GetOrders().Result;
             orderBindingSource.DataSource = orders;
             DetailsView.Enabled = false;
         }
@@ -44,7 +44,7 @@ namespace HomeWork8_1
         {
         }
 
-        private void OrderView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private async void OrderView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex < 0 || e.RowIndex < 0)
             {
@@ -60,7 +60,7 @@ namespace HomeWork8_1
             var cell = gridView[0, e.RowIndex];
             var id = (int) cell.Value;
             Console.WriteLine(id);
-            var order = Service.QueryOrderById(id);
+            var order = await Service.QueryOrderById(id);
             DetailsView.DataSource = order;
             DetailsView.DataMember = "DetailsList";
         }
@@ -74,12 +74,13 @@ namespace HomeWork8_1
             orderBindingSource.DataSource = orders.ToArray();
         }
 
-        private void QueryOrder_Click(object sender, EventArgs e)
+        private async void QueryOrder_Click(object sender, EventArgs e)
         {
-            if (textBoxSearchContent.TextLength == 0)
-            {
-                return;
-            }
+            if (string.IsNullOrWhiteSpace(textBoxSearchContent.Text)) return;
+            var search = textBoxSearchContent.Text.Trim();
+            var orderId = int.Parse(search);
+            var order = await Service.QueryOrderById(orderId);
+            
         }
     }
 }

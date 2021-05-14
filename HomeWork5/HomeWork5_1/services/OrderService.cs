@@ -14,45 +14,41 @@ namespace HomeWork5_1.services
 
         public async Task<List<Order>> GetOrders()
         {
-            var task = Task.Run(  () => 
-            {
-                 
-                db.Orders.Include(o => o.DetailsList).Include(o => o.Customer)
-                    .Include(o => o.DetailsList.Select(d => d.Item)).Load();
-                
-            });
-            await task;
+            await db.Orders.Include(o => o.DetailsList)
+                .Include(o => o.Customer)
+                .Include(o => o.DetailsList.Select(d => d.Item))
+                .LoadAsync();
+            
             return db.Orders.ToList();
         }
 
 
-        public void AddOrder(Order order)
+        public Order AddOrder(Order order)
         {
             if (order == null)
             {
-                throw new NullReferenceException("订单非法!");
+                throw new ArgumentException(nameof(order));
             }
 
-            if (db.Orders.Contains(order))
-                throw new Exception("该订单已存在，请不要重复添加!");
+            var add = db.Orders.Add(order);
+            return add;
+        }
 
-            db.Orders.Add(order);
-            db.SaveChanges();
+        public async Task<int> SaveChangesAsync()
+        {
+            return await db.SaveChangesAsync();
         }
 
 
         /// <summary>
         ///     删除符合条件的order
         /// </summary>
-        /// <param name="predicate">通过给定条件匹配对应的order</param>
-        public void DeleteOrder(Predicate<Order> predicate)
+        /// <param name="order"></param>
+        public void DeleteOrder(Order order)
         {
-            var order = db.Orders.FirstOrDefault(o => predicate(o));
-            if (order != null)
-            {
-                db.Orders.Remove(order);
-                db.SaveChanges();
-            }
+            if (order == null) throw new ArgumentException(nameof(order));
+
+            db.Orders.Remove(order);
         }
 
         /// <summary>
@@ -77,36 +73,28 @@ namespace HomeWork5_1.services
         /// <param name="orderId"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public Order QueryOrderById(int orderId)
+        public async Task<Order> QueryOrderById(int orderId)
         {
-            var order = db.Orders.Find(orderId);
+            var order = await db.Orders.FirstOrDefaultAsync(o => o.OrderId == orderId);
+
             if (order == null) throw new Exception("该订单不存在");
 
             return order;
         }
 
-        /// <summary>
-        ///     通过给定条件获取order
-        /// </summary>
-        /// <param name="predicate"></param>
-        /// <returns></returns>
-        public List<Order> QueryOrder(Predicate<Order> predicate)
-        {
-            var orders = db.Orders.Where(o => predicate(o));
-            return orders.OrderBy(o => o.TotalMoney).ToList();
-        }
 
         /// <summary>
         ///     返回所有包含指定商品的orders
         /// </summary>
         /// <param name="itemDescription"></param>
         /// <returns></returns>
-        public List<Order> QueryOrderByItemName(string itemDescription)
+        public async Task<List<Order>> QueryOrderByItemName(string itemDescription)
         {
-            var orders = db.Orders
-                .Where(order => order.DetailsList
-                    .Any(details => details.Item.Description.Equals(itemDescription)))
-                .ToList();
+            var orders = await db.Orders
+                .Where(order => order
+                    .DetailsList
+                    .Any(details => details.Item.Description.Contains(itemDescription)))
+                .ToListAsync();
 
             return orders;
         }

@@ -32,15 +32,13 @@ namespace HomeWork8_1
         {
             
             var customer = new Customer(TextBoxCustomerName.Text, textBoxAddress.Text);
-            var order = new Order(new List<OrderDetails>(details),
+            var order = new Order(details,
                 DateTime.Now,customer);
             orderService.AddOrder(order);
             Close();
         }
 
-        private void CheckStatus()
-        {
-        }
+     
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
