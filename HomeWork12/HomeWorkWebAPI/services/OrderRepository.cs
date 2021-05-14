@@ -28,10 +28,7 @@ namespace HomeWorkWebAPI.services
 
         public void AddOrder(Order order)
         {
-            if (order == null)
-            {
-                throw new ArgumentNullException(nameof(order));
-            }
+            if (order == null) throw new ArgumentNullException(nameof(order));
 
             order.Id = Guid.NewGuid();
             context.Add(order);

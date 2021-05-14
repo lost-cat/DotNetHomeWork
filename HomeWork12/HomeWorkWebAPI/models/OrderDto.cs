@@ -4,7 +4,6 @@ using HomeWorkWebAPI.entities;
 
 namespace HomeWorkWebAPI.models
 {
-    
     public class OrderDto
     {
         public Guid Id { get; set; }
@@ -12,6 +11,5 @@ namespace HomeWorkWebAPI.models
         public Customer Customer { get; set; }
         public List<OrderDetail> List { get; set; }
         public double TotalMoney { get; set; }
-
     }
 }

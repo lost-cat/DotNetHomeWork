@@ -1,4 +1,4 @@
-using System.Reflection;
+using System;
 using HomeWorkWebAPI.data;
 using HomeWorkWebAPI.services;
 using Microsoft.AspNetCore.Builder;
@@ -30,9 +30,11 @@ namespace HomeWorkWebAPI
 
             services.AddControllers(); //创建控制器对象， 创建时进行依赖注入
 
-            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddScoped<IOrderRepository, OrderRepository>();
+
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
 
             services.AddSwaggerGen(c =>
             {

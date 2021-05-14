@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using HomeWorkWebAPI.data;
 using HomeWorkWebAPI.entities;
 using HomeWorkWebAPI.services;
 using Microsoft.AspNetCore.Mvc;
@@ -23,7 +22,7 @@ namespace HomeWorkWebAPI.Controllers
         public async Task<ActionResult<List<Order>>> GetOrders()
         {
             var orders = await repository.GetOrders();
-            
+
             return new JsonResult(orders);
         }
     }

@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HomeWorkWebAPI.services
 {
-    class CustomerRepository : ICustomerRepository
+    internal class CustomerRepository : ICustomerRepository
     {
         private readonly OrderContext context;
 
