@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using HomeWorkWebAPI.entities;
 
 namespace HomeWorkWebAPI.models
@@ -8,8 +9,8 @@ namespace HomeWorkWebAPI.models
     {
         public Guid Id { get; set; }
         public DateTime Time { get; set; }
-        public Customer Customer { get; set; }
-        public List<OrderDetail> List { get; set; }
-        public double TotalMoney { get; set; }
+        public CustomerDto Customer { get; set; }
+        public List<OrderDetailDto> List { get; set; }
+        public double TotalMoney => List.Sum(d => d.Money);
     }
 }

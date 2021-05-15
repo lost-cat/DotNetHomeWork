@@ -13,7 +13,7 @@ namespace HomeWorkWebAPI.services
 
         public OrderRepository(OrderContext context)
         {
-            this.context = context;
+            this.context = context ?? throw  new  ArgumentNullException(nameof(context));
         }
 
         public async Task<List<Order>> GetOrders()
@@ -28,9 +28,15 @@ namespace HomeWorkWebAPI.services
 
         public void AddOrder(Order order)
         {
-            if (order == null) throw new ArgumentNullException(nameof(order));
-
             order.Id = Guid.NewGuid();
+            if (order.List.Count!=0)
+            {
+                foreach (var detail in order.List)
+                {
+                    detail.Id = Guid.NewGuid();
+                    
+                }
+            }
             context.Add(order);
         }
 
