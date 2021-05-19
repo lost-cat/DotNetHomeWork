@@ -27,18 +27,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4054c0a-bb39-4409-b4c1-e5101fa3ead2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/models/ItemAddDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/models/ItemDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/models/OrderAddDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/models/OrderDetailAddDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/models/OrderDetailDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/profiles/OrderProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/services/DetailRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/services/IDetailRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/Controllers/DetailController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/profiles/DetailProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/profiles/ItemProfile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DotNetHomeWork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DotNetHomeWork/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/Controllers/OrderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/Controllers/OrderController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/models/OrderDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/models/OrderDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/HomeWorkWebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/HomeWorkWebAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/data/OrderContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/data/OrderContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/Customer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/OrderDetail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/OrderDetail.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/services/DetailRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/services/DetailRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/services/OrderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/services/OrderRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/HomeWork5_1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork5/HomeWork5_1/HomeWork5_1.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork6/UnitTest/UnitTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork6/UnitTest/UnitTest.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork6/UnitTest/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork6/UnitTest/packages.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/App.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/HomeWork8_1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork8/HomeWork8_1/HomeWork8_1.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +70,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C3E4C2E9-CFE1-442E-80B2-6211DD3536D6/b0/18fa3d25/EntityFrameworkQueryableExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HomeWork6/UnitTest/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/1DC64490-9E64-41A3-973D-1A611CC1D047/aa/338dfb30/MySql.Data.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HomeWork5/HomeWork5_1/entities/Customer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -98,9 +105,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/HomeWork6/UnitTest/App.config" />
-      <option value="$APPLICATION_CONFIG_DIR$/consoles/db/099b09aa-da4f-4a04-af80-d05c855c5592/console.sql" />
-      <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/Customer.cs" />
       <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/Item.cs" />
       <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/ItemFactory.cs" />
       <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/app.config" />
@@ -122,33 +126,36 @@
       <option value="$PROJECT_DIR$/HomeWork9/HomeWork9_2/SimpleCrawler.cs" />
       <option value="$PROJECT_DIR$/HomeWork5/HomeWork5_1/services/OrderService.cs" />
       <option value="$PROJECT_DIR$/HomeWork8/HomeWork8_1/Form1.cs" />
-      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/Customer.cs" />
-      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/Order.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/appsettings.json" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/services/IOrderRepository.cs" />
-      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/data/OrderContext.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/Properties/launchSettings.json" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/services/ICustomerRepository.cs" />
-      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/services/CustomerRepository.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/Startup.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/profiles/CustomerDto.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/models/CustomerAddDto.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/profiles/CustomerProfile.cs" />
-      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/Item.cs" />
-      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/OrderDetail.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/models/CustomerDto.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/Controllers/CustomerController.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/services/IDetailRepository.cs" />
-      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/services/DetailRepository.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/profiles/OrderProfile.cs" />
-      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/services/OrderRepository.cs" />
-      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/Controllers/OrderController.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/models/OrderAddDto.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/models/OrderDetailDto.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/models/ItemDto.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/models/ItemAddDto.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/models/OrderDetailAddDto.cs" />
       <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/models/OrderDto.cs" />
+      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/profiles/ItemProfile.cs" />
+      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/profiles/DetailProfile.cs" />
+      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/Customer.cs" />
+      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/services/CustomerRepository.cs" />
+      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/OrderDetail.cs" />
+      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/Order.cs" />
+      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/entities/Item.cs" />
+      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/data/OrderContext.cs" />
+      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/services/OrderRepository.cs" />
+      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/Controllers/OrderController.cs" />
+      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/services/DetailRepository.cs" />
+      <option value="$PROJECT_DIR$/HomeWork12/HomeWorkWebAPI/Controllers/DetailController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1p6OnUetM20NoeNuM6fL1HJ0rQk" />
@@ -647,7 +654,12 @@
       <workItem from="1620951024035" duration="10151000" />
       <workItem from="1620995207459" duration="136000" />
       <workItem from="1621043613539" duration="4416000" />
-      <workItem from="1621076449806" duration="2060000" />
+      <workItem from="1621076449806" duration="2146000" />
+      <workItem from="1621131798031" duration="1243000" />
+      <workItem from="1621254952289" duration="1457000" />
+      <workItem from="1621324883703" duration="4208000" />
+      <workItem from="1621331861718" duration="4163000" />
+      <workItem from="1621398294535" duration="1441000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1614500886720</created>
@@ -971,7 +983,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620963107670</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="web api 开发">
+      <created>1621082633056</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1621082633056</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1051,7 +1070,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="aa" />
     <MESSAGE value="第三次作业" />
     <MESSAGE value="random代码修改" />
     <MESSAGE value="将三角形边长设为属性" />
@@ -1076,7 +1094,8 @@
     <MESSAGE value="第11次作业" />
     <MESSAGE value="webapi开发" />
     <MESSAGE value="Customer crud" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer crud" />
+    <MESSAGE value="web api 开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="web api 开发" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

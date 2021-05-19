@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 
 namespace HomeWorkWebAPI.entities
@@ -13,6 +14,5 @@ namespace HomeWorkWebAPI.entities
 
 
         public Customer Customer { get; set; }
-        public Guid CustomerId { get; set; }
     }
 }

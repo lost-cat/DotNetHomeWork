@@ -38,11 +38,12 @@ namespace HomeWorkWebAPI.Controllers
                 return NotFound();
             }
 
-            return Ok(order);
+            var orderDto = mapper.Map<OrderDto>(order);
+            return Ok(orderDto);
         }
 
         [HttpPost]
-        public async Task<ActionResult<Order>> CreateOrder(OrderAddDto orderAdd)
+        public async Task<ActionResult<Order>> CreateOrder([FromBody]OrderAddDto orderAdd)
         {
             if (orderAdd == null)
             {

@@ -18,6 +18,10 @@ namespace HomeWorkWebAPI.data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Order>().Property(o => o.Time).IsRequired().HasMaxLength(20);
+            modelBuilder.Entity<OrderDetail>()
+                .HasOne(a => a.Item)
+                .WithOne(a => a.OrderDetail)
+                .HasForeignKey<Item>(i=>i.OrderDetailId);
         }
     }
 }
